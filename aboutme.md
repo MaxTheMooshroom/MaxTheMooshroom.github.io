@@ -1,16 +1,11 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: All about Maxie Lawrence as a Data Scientist
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et lacus vel purus placerat gravida. Morbi pretium eros sed massa molestie, ut pulvinar sem facilisis. Integer sed nibh commodo, consequat ex ut, venenatis libero. Nam bibendum magna sed augue porta, sit amet sollicitudin elit rutrum. Cras volutpat at ipsum eget venenatis. Sed nisl libero, blandit et congue in, pharetra at arcu. Duis sodales, odio eu consectetur pulvinar, sem nunc condimentum lorem, sit amet posuere ipsum dolor at diam. Morbi justo lectus, tincidunt eget pellentesque et, mattis nec risus. Fusce nisl massa, luctus ac dui et, rutrum blandit augue. In molestie molestie justo, quis lobortis metus suscipit eu. Nunc at lorem luctus, condimentum justo eu, varius lorem. Etiam non imperdiet tortor. Sed eros purus, imperdiet et vulputate sed, venenatis tincidunt magna. Praesent molestie metus sapien, ac facilisis ligula hendrerit in. In id diam sapien.
 
 ### my history
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Cras lectus risus, vehicula vel lectus sit amet, fermentum maximus mauris. Nunc nec tortor in elit sodales lacinia. Suspendisse auctor fermentum leo at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ultricies quam in commodo. Curabitur laoreet varius quam at consectetur. Etiam in gravida ex, vel sollicitudin augue. Nullam vehicula tellus ac erat tempus, a sollicitudin purus rhoncus. Praesent in libero eu libero tincidunt hendrerit sit amet vitae magna. Vivamus non quam volutpat, imperdiet lectus in, mattis lacus. Proin libero sapien, dictum in tellus vitae, consequat egestas felis. Vivamus eget iaculis massa.
