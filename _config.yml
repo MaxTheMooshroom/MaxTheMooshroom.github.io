@@ -39,7 +39,7 @@ avatar: "/img/icon_me.png"
 
 navbar-col: "#3C2934"
 navbar-text-col: "#908197"
-navbar-children-col: "#908197"
+navbar-children-col: "#3C2934"
 page-col: "#F4F7F6"
 link-col: "#AB4056"
 hover-col: "#C28768"
