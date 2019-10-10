@@ -23,7 +23,6 @@ navbar-links:
   About Me: "aboutme"
   Projects:
     - Splice: "http://github.com/MaxTheMooshroom/Splice"
-    - Learn markdown: "http://www.markdowntutorial.com/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
