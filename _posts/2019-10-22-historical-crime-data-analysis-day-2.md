@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Historical Crime Data Analysis Day 2
-image: /img/ski-mask.png
+image: /img/crime-analysis-annual-violent-race.png
 ---
 So after cleaning the data yesterday, I was able to figure out what each column meant. I decided to look at violent crime based on race.<br>
 So I I ran feature extraction on ann rows where column `VTYPE` is 1, meaning violent crime.
