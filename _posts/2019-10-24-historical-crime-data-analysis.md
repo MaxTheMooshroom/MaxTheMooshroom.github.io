@@ -36,7 +36,8 @@ I did a lot of chopping. The population's racial distribution wasn't as detailed
 ![Annual Crime Rates from 1992 to 2016](/img/crime-analysis-annual-violent-race-final.png)<br><br>
 When analyzing a graph of the chi squared test results of each year, you can see that the results are statistically significant every year except 2016.<br>
 ![chi-squared-test-results](/img/chi-squared-test-results.png)
-
+<br>
+So, we fail to reject the hypothesis that all of these races are assaulted in equal proportions.
 
 
 
