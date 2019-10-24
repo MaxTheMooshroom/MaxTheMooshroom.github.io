@@ -3,7 +3,7 @@ layout: post
 title: Historical Crime Data Analysis
 image: /img/crime-analysis-annual-violent-race-final.png
 ---
-## Day 1
+## Day 1<br>
 <br>
 I spent the day cleaning up a 4,377,389-row by 152-column data frame. <br>
 It had a <strong>lot</strong> of unneccesary data, and probably still does. I'll continue to work on it for now. <br>
