@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Historical Crime Data Analysis
-image: /img/ski-mask.png
+image: /img/crime-analysis-annual-violent-race-final.png
 ---
 ## Day 1
 <br>
@@ -33,10 +33,9 @@ I spent the day reforming the data into something useable, and got this:<br>
 ## Day 4
 <br>
 I did a lot of chopping. The population's racial distribution wasn't as detailed as the data I had, so I took the population for only the specific singular races. Doint it for races with miniscule populations would require guessing and It is of my preference to keep the data as accurate as possible, even if that means I have less of it as a result. So, I compared the crime experienced by those races to the total population of those races, and used that to adjust to per capita. However, the data spanned only from 2009 to 2017, so the overlapping useable data is from 2009 to 2016. <br>
-In the end, I'm left with a pretty clear picture. 
-![Annual Crime Rates from 1992 to 2016](/img/crime-analysis-annual-violent-race-final.png)
-
-
+![Annual Crime Rates from 1992 to 2016](/img/crime-analysis-annual-violent-race-final.png)<br><br>
+When analyzing a graph of the chi squared test results of each year, you can see that the results are statistically significant every year except 2016.<br>
+![chi-squared-test-results](/img/chi-squared-test-results.png)
 
 
 
