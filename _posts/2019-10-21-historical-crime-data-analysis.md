@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Historical Crime Data Analysis
-image: /img/ski-mask.png
+image: /img/crime-analysis-annual-violent-race-final.png
 ---
 ## Day 1
 <br>
