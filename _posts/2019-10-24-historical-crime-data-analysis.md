@@ -44,5 +44,7 @@ After that, we run each year's samples through a chi-squared test. If a year's r
 <br>
 So, we reject the hypothesis that all of these races are assaulted in equal proportions.
 
+[My work!](https://colab.research.google.com/drive/1eJNNqO0pN2wxLq6e9DAFTczW5Pbdjj_i)
+
 
 
