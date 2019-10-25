@@ -5,7 +5,10 @@ image: /img/crime-analysis-annual-violent-race-final.png
 ---
 ## Day 1<br>
 <br>
-I spent the day cleaning up a 4,377,389-row by 152-column data frame. <br>
+I've started an adventure to find the race, if any, highest at risk of being the victim of a violent crime.
+In this pursuit, I've located a data table with reported crimes from 1992 to 2016. <br>
+
+I spent the day cleaning up the 4,377,389-row by 152-column table. <br>
 It had a <strong>lot</strong> of unneccesary data, and probably still does. I'll continue to work on it for now. <br>
 
 More updates will come as I continue working. :D
