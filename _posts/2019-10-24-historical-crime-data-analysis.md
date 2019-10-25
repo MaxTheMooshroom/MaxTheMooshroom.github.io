@@ -36,7 +36,7 @@ __*Source: National Crime Victimization Survey*__<br><br>
 I did a lot of chopping. The population's racial distribution wasn't as detailed as the data I had, so I took the population for only the specific singular races. Doing it for races with miniscule populations would require guessing and I want to keep the data as accurate as possible, even if that means I have less of it as a result. So, I compared the crime experienced by those races to the total population of those races and used that to adjust to per capita, using US Census data. However, the data spanned only from 2009 to 2017, so the overlapping useable data is from 2009 to 2016. <br><br>
 ![Annual Crime Rates from 1992 to 2016](/img/crime-analysis-annual-violent-race-final.png)<br>
 __*Source: National Crime Victimization Survey*__<br><br>
-When analyzing a graph of the chi squared test results of each year, you can see that the results are statistically significant every year except 2016.<br>
+After that, we run each year's samples through a chi-squared test. If a year's result is more than 0.95, that means that the data from that year is outside of what you'd expect through random variation and can be considered to be biased. When you graph the data, as seen below, you can see that the results every year are biased except 2016.<br>
 ![chi-squared-test-results](/img/chi-squared-test-results.png)
 <br>
 So, we fail to reject the hypothesis that all of these races are assaulted in equal proportions.
