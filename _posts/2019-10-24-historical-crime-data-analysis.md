@@ -39,7 +39,7 @@ __*Source: National Crime Victimization Survey*__<br><br>
 After that, we run each year's samples through a chi-squared test. If a year's result is more than 0.95, that means that the data from that year is outside of what you'd expect through random variation and can be considered to be biased. When you graph the data, as seen below, you can see that the results for each year are biased except 2016.<br>
 ![chi-squared-test-results](/img/chi-squared-test-results.png)
 <br>
-So, we fail to reject the hypothesis that all of these races are assaulted in equal proportions.
+So, we reject the hypothesis that all of these races are assaulted in equal proportions.
 
 
 
