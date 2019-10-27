@@ -1,7 +1,8 @@
 # Unity
 
 Some Unity projects I'm working on include ecosystem simulation and procedural cave generation!<br>
-As of now (October 21st, 2019) there is no source code or any references to speak of.<br>
+As of now (October 21st, 2019) there is no public source code.<br>
+When [Splice](https://maxthemooshroom.github.io/projects/cpp/) is far enough in development to do so, these projects will likely be moved to work on that engine instead. 
 
 ### Procedural Cave Generation
 The latest update I have for my progress is [here](https://youtu.be/hN5VbrwE3Ik)!
