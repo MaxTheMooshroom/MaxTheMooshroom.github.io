@@ -5,7 +5,7 @@ image: /img/crime-analysis-annual-violent-race-final.png
 ---
 ## Day 1<br>
 <br>
-I've started an adventure to find the race, if any, highest at risk of being the victim of a violent crime.
+I've started an adventure to find the race, if any, highest at risk of being the victim of a violent crime in the USA.
 In this pursuit, I've located a data table with reported crimes from 1992 to 2016. <br>
 
 I spent the day cleaning up the 4,377,389-row by 152-column table. <br>
