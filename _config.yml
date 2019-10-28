@@ -20,7 +20,9 @@ description: A WIP Website to Showcase Myself
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About Me: 
+    - Personal Description: "about-me"
+    - Resume: ""
   Projects:
     - C++: "projects/cpp"
     - Unity: "projects/unity"
