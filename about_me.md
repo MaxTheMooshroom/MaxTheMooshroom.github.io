@@ -3,8 +3,10 @@ layout: page
 title: About me
 subtitle: My progression as a Data Scientist
 ---
+<div style="text-align:center">
 ***Image to be changed later***<br>
 <img src="/img/icon_me.png" width="200"><br>
+</div>
 
 Hi, I'm Maxie Lawrence! I'm a Data Scientist whose goal is the betterment of the fields I work with through careful analysis and prediction using past data and intuition! <br><br>
 
