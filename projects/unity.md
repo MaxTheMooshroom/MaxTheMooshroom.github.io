@@ -9,12 +9,12 @@ When [Splice](https://maxthemooshroom.github.io/projects/cpp/) is far enough in 
 I plan on creating a food web with various plants and animals that have traits similar to real-life counterparts in an attempt to create a statistical analysis of what it takes to create a sustainable habitat for long term survival, and what impacts human activities have on that stability. Studying underlying concepts: <br>
 <a></a>
 **Completed:**<br>
-* [Terrain Generation](https://github.com/MaxTheMooshroom/perlin_flight)
+* [Terrain Generation](https://github.com/MaxTheMooshroom/perlin_flight)<br>
 <a></a>
 **WIP:**<br>
 * [Procedural Cave Generation](https://youtu.be/H_KVauLE4sQ)!<br>
 <a></a>
-**To Do:**
+**To Do:**<br>
 * Realistic Terrain Erosion<br>
 * Biome mapping with a realistic logical heatmap<br>
 * Weather Patterns<br>
