@@ -10,7 +10,7 @@ I plan on creating a food web with various plants and animals that have traits s
 
 Right now, I'm studying the following underlying concepts: <br>
 **Completed:**<br>
-* [Terrain Generation](https://github.com/MaxTheMooshroom/perlin_flight)<br>
+* [Terrain Generation](https://github.com/MaxTheMooshroom/perlin_flight) (In Java)<br>
 
 
 **WIP:**<br>
