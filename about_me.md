@@ -3,11 +3,13 @@ layout: page
 title: About me
 subtitle: My progression as a Data Scientist
 ---
+***Image to be changed later***<br>
+![Me!](/img/icon_me.png)<br>
 
-I started my education at Lambda School on September 30th, 2019. So far, we've covered some basic python, various math libs, and various aspects of inferential statistics and how to represent that data in numerical and graphical form. 
+Hi, I'm Maxie Lawrence! I'm a Data Scientist whose goal is the betterment of the fields I work with through careful analysis and prediction using past data and intuition! <br><br>
 
-### My History
+My email is [Max.Alexander3721@gmail.com](Max.Alexander3721@gmail.com)<br>
+My github is [MaxTheMooshroom](https://github.com/MaxTheMooshroom)
 
-Prior to my education, I studied computer science on my own, and managed to learn a good deal about optimization and graphics in various languages using various graphics APIs. 
-
-I started to look into AI more seriously, and found Lambda School. 
+## Skills
+I have experience using [C++](/projects/cpp), C#, [Java](/projects/processing), and Python programming languages. 
