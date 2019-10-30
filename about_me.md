@@ -4,7 +4,7 @@ title: About me
 subtitle: My progression as a Data Scientist
 ---
 <div style="text-align:center">
-***Image to be changed later***<br>
+  <strong>Image to be changed later</strong><br>
 <img src="/img/icon_me.png" width="200"><br>
 </div>
 
