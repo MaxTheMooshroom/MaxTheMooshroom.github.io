@@ -8,11 +8,9 @@ When [Splice](https://maxthemooshroom.github.io/projects/cpp/) is far enough in 
 ### Ecosystem Simulation
 I plan on creating a food web with various plants and animals that have traits similar to real-life counterparts in an attempt to create a statistical analysis of what it takes to create a sustainable habitat for long term survival, and what impacts human activities have on that stability. Studying underlying concepts: <br>
 **Completed:**<br>
-* [Terrain Generation](https://github.com/MaxTheMooshroom/perlin_flight)<br>
-[//]: # (Hello)
+* [Terrain Generation](https://github.com/MaxTheMooshroom/perlin_flight)\n\n
 **WIP:**<br>
-* [Procedural Cave Generation](https://youtu.be/H_KVauLE4sQ)!<br>
-[//]: # (Hello)
+* [Procedural Cave Generation](https://youtu.be/H_KVauLE4sQ)!\n\n
 **To Do:**
 * Realistic Terrain Erosion<br>
 * Biome mapping with a realistic logical heatmap<br>
