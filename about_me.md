@@ -10,7 +10,7 @@ subtitle: My progression as a Data Scientist
 
 Hi, I'm Maxie Lawrence! I'm a Data Scientist whose goal is the betterment of the fields I work with through careful analysis and prediction with past data using skill and intuition! <br><br>
 
-My email is [Max.Alexander3721@gmail.com](Max.Alexander3721@gmail.com)<br>
+My email is [Max.Alexander3721@gmail.com](mailto:Max.Alexander3721@gmail.com)<br>
 My github is [MaxTheMooshroom](https://github.com/MaxTheMooshroom)
 
 ## Skills
