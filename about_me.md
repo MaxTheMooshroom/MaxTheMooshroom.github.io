@@ -4,7 +4,7 @@ title: About me
 subtitle: My progression as a Data Scientist
 ---
 ***Image to be changed later***<br>
-![Me!](/img/icon_me.png =250x250)<br>
+![Me!](/img/icon_me.png=250x250)<br>
 
 Hi, I'm Maxie Lawrence! I'm a Data Scientist whose goal is the betterment of the fields I work with through careful analysis and prediction using past data and intuition! <br><br>
 
