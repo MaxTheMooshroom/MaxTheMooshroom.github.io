@@ -23,6 +23,7 @@ navbar-links:
   About Me: 
     - Personal Description: "about_me"
     - Resume: ""
+    - LinkedIn: "https://www.linkedin.com/in/james-max-lawrence-792b53157/"
   Projects:
     - C++: "projects/cpp"
     - Unity: "projects/unity"
