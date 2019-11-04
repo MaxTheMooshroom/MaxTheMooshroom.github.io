@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: My progression as a Data Scientist
+subtitle: A concise description
 ---
 <div style="text-align:center">
   <strong>Image to be changed later</strong><br>
