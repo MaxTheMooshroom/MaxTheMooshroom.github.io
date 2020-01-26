@@ -24,12 +24,14 @@ navbar-links:
     - Personal Description: "about_me"
     - Resume: ""
     - LinkedIn: "https://www.linkedin.com/in/james-max-lawrence-792b53157/"
-  Projects:
-    - C++: "projects/cpp"
-    - Unity: "projects/unity"
-    - Processing: "projects/processing"
-    - Python: "projects/python"
-    - Data Sets: "projects/data-sets"
+  Portfolio:
+    Programming:
+      - C++: "projects/cpp"
+      - Unity: "projects/unity"
+      - Processing: "projects/processing"
+      - Python: "projects/python"
+    References:
+      - Data Sets: "projects/data-sets"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
