@@ -1,7 +1,11 @@
 # Splice Blog
 
 No content yet, but here I'll be outlining the goals of my engine and trying to go through various 
-iterations of various graphics APIs, what I plan to do with them, and how I plan on learning. 
+iterations of various graphics APIs, what I plan to do with them, and how I plan on learning.
+
+## What is Splice
+Splice is a rendering, simulation, and game development engine purpose-built for flexibility and 
+artificial intelligence, with a still high focus on visualizing machine learning data. Any physics are drastically reduced in performance cost using [AMPM](https://www.youtube.com/watch?v=wsFgrzYwchQ) and [SSNP](https://www.youtube.com/watch?v=atcKO15YVD8)!
 
 ## Outline
 I plan on making an MVP engine using OpenGL, then DirectX 11, then Vulkan. After that, I'll 
@@ -47,7 +51,7 @@ Iteration 3 includes only the Vulkan API, and will really just be
 - [ ] Use the gamestate hooks to implement AMPM and SSNP
   - [ ] AMPM
   - [ ] SSNP
-- [ ] Implement Muscular animation technique
+- [ ] Implement Muscular Animation Technique
   - [ ] Design
   - [ ] Plan
   - [ ] Code
