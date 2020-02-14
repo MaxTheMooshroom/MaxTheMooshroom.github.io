@@ -1,0 +1,53 @@
+# Splice Blog
+
+No content yet, but here I'll be outlining the goals of my engine and trying to go through various 
+iterations of various graphics APIs, what I plan to do with them, and how I plan on learning. 
+
+## Outline
+I plan on making an MVP engine using OpenGL, then DirectX 11, then Vulkan. After that, I'll 
+start over, using OpenGL, DirectX12, and then Vulkan again. Finally, I'll start over once more 
+just using Vulkan. Through this, I hope to iterate through various implementations and techniques, 
+picking up new knowledges and better ways of doing things as I go. Here is an outline for each of 
+my iterations and what I hope to accomplish with each one.
+
+### Iteration 1
+For each API in the first iteration I will do the following:
+- [ ] Create an OS interface for Windows
+- [ ] Create a Window
+- [ ] Render a triangle to the Window
+- [ ] Animate a triangle in the Window
+- [ ] Take user input from the OS and use it to control the animation of a triangle
+- [ ] Implement 3D-Space
+- [ ] Implement Shaders using the relevant graphics pipeline
+- [ ] Render a cube
+- [ ] Texture the cube
+- [ ] Animate the textured cube
+- [ ] Implement a model loader
+- [ ] Implement an event bus for dispatching updates throughout the engine
+- [ ] Implement a Camera that can move and rotate on all 3 axes
+- [ ] Implement Shader File Loading
+- [ ] Implement skeletal animation
+  - [ ] Implement virtual bones that move connected vertices when the bone moves
+  - [ ] Implement weight painting vertice movements caused by bone movement
+- [ ] Implement Raytracing
+
+### Iteration 2
+For each API in the second iteration I will do the following:
+- [ ] Everything from iteration 1
+  - [ ] Improvements.
+- [ ] Implement Pathtracing
+- [ ] Implement gamestate hooks for AI to hook into the engine from
+
+### Iteration 3
+Iteration 3 includes only the Vulkan API, and will really just be 
+- [ ] Iteration 1
+  - [ ] Improvements.
+- [ ] Iteration 2
+  - [ ] Improvements.
+- [ ] Use the gamestate hooks to implement AMPM and SSNP
+  - [ ] AMPM
+  - [ ] SSNP
+- [ ] Implement Muscular animation technique
+  - [ ] Design
+  - [ ] Plan
+  - [ ] Code
