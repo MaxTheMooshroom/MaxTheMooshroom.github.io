@@ -15,7 +15,8 @@ picking up new knowledges and better ways of doing things as I go. Here is an ou
 my iterations and what I hope to accomplish with each one.
 
 ### Iteration 1
-For each API in the first iteration I will do the following:
+For each API in the first iteration I will do the following:<br>
+:black_square_button: OpenGL    :black_square_button: DirectX11    :black_square_button: Vulkan
 - [ ] Create an OS interface for Windows
 - [ ] Create a Window
 - [ ] Render a triangle to the Window
@@ -36,7 +37,8 @@ For each API in the first iteration I will do the following:
 - [ ] Implement Raytracing
 
 ### Iteration 2
-For each API in the second iteration I will do the following:
+For each API in the second iteration I will do the following:<br>
+:black_square_button: OpenGL    :black_square_button: DirectX11    :black_square_button: Vulkan
 - [ ] Everything from iteration 1
   - [ ] Improvements.
 - [ ] Implement Pathtracing
