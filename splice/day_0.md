@@ -38,7 +38,7 @@ For each API in the first iteration I will do the following:<br>
 
 ### Iteration 2
 For each API in the second iteration I will do the following:<br>
-:black_square_button: OpenGL    :black_square_button: DirectX11    :black_square_button: Vulkan
+:black_square_button: OpenGL    :black_square_button: DirectX12    :black_square_button: Vulkan
 - [ ] Everything from iteration 1
   - [ ] Improvements.
 - [ ] Implement Pathtracing
