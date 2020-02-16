@@ -24,3 +24,7 @@ Concept artist
 :ballot_box_with_check: Confirmed teammate
 
 System Administrator
+
+### Alex
+:ballot_box_with_check: Confirmed teammate
+Programmer
