@@ -5,7 +5,8 @@ iterations of various graphics APIs, what I plan to do with them, and how I plan
 
 ## What is Splice
 Splice is a rendering, simulation, and game development engine purpose-built for flexibility and 
-artificial intelligence, with a still high focus on visualizing machine learning data. Any physics are drastically reduced in performance cost using [AMPM](https://www.youtube.com/watch?v=wsFgrzYwchQ) and [SSNP](https://www.youtube.com/watch?v=atcKO15YVD8)!
+artificial intelligence, with a still high focus on visualizing machine learning data. Any physics are drastically reduced 
+(by orders of magnitude) in performance cost using [AMPM](https://www.youtube.com/watch?v=wsFgrzYwchQ) and [SSNP](https://www.youtube.com/watch?v=atcKO15YVD8)!
 
 ## Outline
 I plan on making an MVP engine using OpenGL, then DirectX 11, then Vulkan. After that, I'll 
@@ -41,6 +42,7 @@ For each API in the second iteration I will do the following:<br>
 :black_square_button: OpenGL    :black_square_button: DirectX12    :black_square_button: Vulkan
 - [ ] Everything from iteration 1
   - [ ] Improvements.
+- [ ] Create an OS interface for Linux and Mac
 - [ ] Implement Pathtracing
 - [ ] Implement gamestate hooks for AI to hook into the engine from
 
@@ -50,6 +52,7 @@ Iteration 3 includes only the Vulkan API, and will really just be
   - [ ] Improvements.
 - [ ] Iteration 2
   - [ ] Improvements.
+- [ ] Create an OS interface for PlayStation and XBox
 - [ ] Use the gamestate hooks to implement AMPM and SSNP
   - [ ] AMPM
   - [ ] SSNP
