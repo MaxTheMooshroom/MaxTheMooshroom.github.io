@@ -31,11 +31,16 @@ For each API in the first iteration I will do the following:<br>
 - [ ] Implement a model loader
 - [ ] Implement an event bus for dispatching updates throughout the engine
 - [ ] Implement a Camera that can move and rotate on all 3 axes
-- [ ] Implement saving progress and scenes
 - [ ] Implement Shader File Loading
 - [ ] Implement skeletal animation
   - [ ] Implement virtual bones that move connected vertices when the bone moves
   - [ ] Implement weight painting vertice movements caused by bone movement
+- [ ] Implement GUIs
+  - [ ] Implement environment tick disabling
+  - [ ] Implement menus
+  - [ ] Implement button objects
+  - [ ] Implement texture loading for GUI elements
+- [ ] Implement saving
 - [ ] Implement Raytracing
 
 ### Iteration 2
