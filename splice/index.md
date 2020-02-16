@@ -1,3 +1,4 @@
+[//]: # :ballot_box_with_check:
 # Splice Blog
 
 No content yet, but here I'll be outlining the goals of my engine and trying to go through various 
