@@ -17,7 +17,7 @@ picking up new knowledges and better ways of doing things as I go. Here is an ou
 my iterations and what I hope to accomplish with each one.
 
 
-During iteration 3 I'll be working with a team on a small but very polished tech demo. You can see the roster [here](/splice/demo_roster)!
+During iteration 3 I'll be working with a team on a small but very polished [tech demo](/splice/tech_demo). You can see the roster [here](/splice/demo_roster)!
 
 ### Iteration 1
 For each API in the first iteration I will do the following:<br>
