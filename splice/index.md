@@ -62,10 +62,10 @@ Iteration 3 includes only the Vulkan API, and will really just be
   - [ ] Improvements.
 - [ ] Iteration 2
   - [ ] Improvements.
-- [ ] Create an OS interface for PlayStation and XBox
 - [ ] Use the gamestate hooks to implement AMPM and SSNP
   - [ ] AMPM
   - [ ] SSNP
+- [ ] Create an OS interface for PlayStation and XBox
 - [ ] Implement Muscular Animation Technique
   - [ ] Design
   - [ ] Plan
