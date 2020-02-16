@@ -16,6 +16,9 @@ just using Vulkan. Through this, I hope to iterate through various implementatio
 picking up new knowledges and better ways of doing things as I go. Here is an outline for each of 
 my iterations and what I hope to accomplish with each one.
 
+
+During iteration 3 I'll be working with a team on a small but very polished tech demo. You can see the roster [here](/splice/demo_roster)!
+
 ### Iteration 1
 For each API in the first iteration I will do the following:<br>
 :black_square_button: OpenGL    :black_square_button: DirectX11    :black_square_button: Vulkan
