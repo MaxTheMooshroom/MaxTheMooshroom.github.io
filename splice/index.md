@@ -22,8 +22,8 @@ During iteration 3 I'll be working with a team on a small but very polished [tec
 ### Iteration 1
 For each API in the first iteration I will do the following:<br>
 :black_square_button: OpenGL    :black_square_button: DirectX11    :black_square_button: Vulkan
-- [ ] Create an OS interface for Windows
-- [ ] Create a Window
+- [X] Create an OS interface for Windows
+- [X] Create a Window
 - [ ] Render a triangle to the Window
 - [ ] Animate a triangle in the Window
 - [ ] Take user input from the OS and use it to control the animation of a triangle
