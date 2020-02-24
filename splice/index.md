@@ -22,10 +22,10 @@ During iteration 3 I'll be working with a team on a small but very polished [tec
 ### Iteration 1
 For each API in the first iteration I will do the following:<br>
 :black_square_button: OpenGL    :black_square_button: DirectX11    :black_square_button: Vulkan
-- [X] Create an OS interface for Windows
+- [X] Create an OS interface for Windows 
 - [X] Create a Window
 - [X] Render a triangle to the Window
-- [X] Animate a triangle in the Window
+- [X] Animate a triangle in the Window[[1]](/splice/reference/1/)
 - [ ] Implement Shaders using the relevant graphics pipeline
 - [ ] Take user input from the OS and use it to control the animation of a triangle
 - [ ] Implement 3D-Space
