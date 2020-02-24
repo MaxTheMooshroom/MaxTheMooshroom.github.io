@@ -24,11 +24,11 @@ For each API in the first iteration I will do the following:<br>
 :black_square_button: OpenGL    :black_square_button: DirectX11    :black_square_button: Vulkan
 - [X] Create an OS interface for Windows
 - [X] Create a Window
-- [ ] Render a triangle to the Window
-- [ ] Animate a triangle in the Window
+- [X] Render a triangle to the Window
+- [X] Animate a triangle in the Window
+- [ ] Implement Shaders using the relevant graphics pipeline
 - [ ] Take user input from the OS and use it to control the animation of a triangle
 - [ ] Implement 3D-Space
-- [ ] Implement Shaders using the relevant graphics pipeline
 - [ ] Render a cube
 - [ ] Texture the cube
 - [ ] Animate the textured cube
