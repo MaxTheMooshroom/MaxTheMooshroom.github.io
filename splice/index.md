@@ -52,6 +52,7 @@ For each API in the second iteration I will do the following:<br>
 :black_square_button: OpenGL    :black_square_button: DirectX12    :black_square_button: Vulkan
 - [ ] Everything from iteration 1
   - [ ] Improvements.
+- [ ] Implement multi-window support
 - [ ] Create an OS interface for Linux and Mac
 - [ ] Implement Pathtracing
 - [ ] Implement gamestate hooks for AI to hook into the engine from
@@ -62,6 +63,7 @@ Iteration 3 includes only the Vulkan API, and will really just be
   - [ ] Improvements.
 - [ ] Iteration 2
   - [ ] Improvements.
+- [ ] Create a GUI for the engine
 - [ ] Use the gamestate hooks to implement AMPM and SSNP
   - [ ] AMPM
   - [ ] SSNP
