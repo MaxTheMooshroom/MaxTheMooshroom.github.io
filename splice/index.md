@@ -28,6 +28,7 @@ For each API in the first iteration I will do the following:<br>
 - [X] Animate a triangle in the Window [[1]](/splice/reference/1/)
 - [X] Implement Shaders using the relevant graphics pipeline
 - [X] Implement Index buffers
+- [ ] Error catching and console logging
 - [ ] Implement 3D-Space
 - [ ] Render a cube
 - [ ] Texture the cube
