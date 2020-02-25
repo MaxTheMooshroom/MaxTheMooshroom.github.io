@@ -27,7 +27,7 @@ For each API in the first iteration I will do the following:<br>
 - [X] Render a triangle to the Window
 - [X] Animate a triangle in the Window [[1]](/splice/reference/1/)
 - [X] Implement Shaders using the relevant graphics pipeline
-- [ ] Take user input from the OS and use it to control the animation of a triangle
+- [X] Implement Index buffers
 - [ ] Implement 3D-Space
 - [ ] Render a cube
 - [ ] Texture the cube
