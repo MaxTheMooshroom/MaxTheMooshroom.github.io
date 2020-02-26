@@ -1,3 +1,8 @@
+---
+layout: post
+title: Splice
+---
+
 <!-- :ballot_box_with_check: -->
 # Splice Blog
 
