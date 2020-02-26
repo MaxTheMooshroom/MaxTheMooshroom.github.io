@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Splice
+title: Splice Blog
 ---
 
 <!-- :ballot_box_with_check: -->
-# Splice Blog
 
 No content yet, but here I'll be outlining the goals of my engine and trying to go through various 
 iterations of various graphics APIs, what I plan to do with them, and how I plan on learning.
