@@ -27,7 +27,7 @@ navbar-links:
   Portfolio:
     - Programming: "portfolio"
     - References: "references"
-  Splice: "/splice/2020-02-26-splice-blog"
+  Splice: "/splice/index"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
