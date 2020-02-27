@@ -32,8 +32,8 @@ For each API in the first iteration I will do the following:<br>
 - [X] Implement Shaders using the relevant graphics pipeline
 - [X] Implement Index buffers
 - [X] Error catching and console logging
-- [ ] Implement uniforms
-- [ ] Utilize vertex arrays
+- [X] Implement uniforms
+- [X] Utilize vertex arrays
 - [ ] Class Abstraction
 - [ ] Implement 3D-Space
 - [ ] Render a cube
