@@ -1,4 +1,7 @@
-# Splice Tech Demo Roster
+---
+title: Splice Tech Demo Roster
+show-avatar: false
+---
 
 ### Maxine Alexander
 :ballot_box_with_check: Confirmed teammate
