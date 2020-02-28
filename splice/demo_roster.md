@@ -15,8 +15,8 @@ Splice developer and Project Director
 
 Writer
 
-### Kristen
-:black_square_button: Confirmed teammate
+### Miranda
+:ballot_box_with_check: Confirmed teammate
 
 Concept artist
 
