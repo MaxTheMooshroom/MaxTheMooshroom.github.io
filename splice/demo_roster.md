@@ -32,4 +32,5 @@ Programmer
 
 ### Austin Robinson
 :ballot_box_with_check: Confirmed teammate
-Musician
+
+Musician and Data Scientist
