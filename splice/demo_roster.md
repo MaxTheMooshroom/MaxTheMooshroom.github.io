@@ -30,6 +30,6 @@ System Administrator
 
 Programmer
 
-### Austin
+### Austin Robinson
 :ballot_box_with_check: Confirmed teammate
 Musician
