@@ -34,7 +34,8 @@ For each API in the first iteration I will do the following:<br>
 - [X] Error catching and console logging
 - [X] Implement uniforms
 - [X] Utilize vertex arrays
-- [ ] Class Abstraction
+- [X] Class Abstraction
+- [X] Load texture
 - [ ] Implement 3D-Space
 - [ ] Render a cube
 - [ ] Texture the cube
