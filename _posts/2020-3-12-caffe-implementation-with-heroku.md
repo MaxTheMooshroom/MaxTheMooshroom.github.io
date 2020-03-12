@@ -3,7 +3,7 @@ layout: post
 title: Caffe Implementation with Heroku
 ---
 
-Starting out with some context, I wanted to create a Flask web application that would run (Yahoo's NSFW image Predictor)[https://github.com/yahoo/open_nsfw]. So I did everything outlined in their tutorial and ran it. Aaannd immediately ran into a problem.
+Starting out with some context, I wanted to create a Flask web application that would run [Yahoo's NSFW image Predictor](https://github.com/yahoo/open_nsfw). So I did everything outlined in their tutorial and ran it. Aaannd immediately ran into a problem.
 The `caffe` module refused to import. So I did some more reading. From this reading, I discovered that you need to run `apt-get install caffe-cpu`. 
 
 There were 2 problems: 1) I'm running windows. 2) That installation wouldn't carry over to  heroku once I uploaded it. So I had to dig into how to tell heroku to get the file. Okay, cool. A tangible goal. After reading Heroku's documentation, I found that it was as simple as creating an `Aptfile` file, similar to teh `Procfile`, and just adding `caffe-cpu`. Done. Push it to Heroku, and...! Bootup failure. Still can't import the `caffe` module. Drats.
