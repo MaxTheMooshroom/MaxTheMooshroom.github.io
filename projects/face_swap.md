@@ -31,4 +31,4 @@ The final pipeline will look like this:
 ![AE_PIPELINE](/projects/ae_pipeline.png)
 
 
-If you are interested in helping, please email me at Max.Alexander3721@gmail.com or DM me on Slack or Discord if you have me on either of those platforms. 
+If you are interested in working together on it, please email me at Max.Alexander3721@gmail.com or DM me on Slack or Discord if you have me on either of those platforms. 
