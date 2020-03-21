@@ -20,7 +20,7 @@ Plug the outputs of the AEs into a GAN. Take real inputs, tweak the values in th
 and classify the results as "real" or "fake" with a discriminator network. 
 
 Step 3:
-train a classifier for classifying images as male or female. Feed a male image into the female AR, and vice versa.
+train a classifier for classifying images as male or female. Feed a male image into the female AE, and vice versa. This will be used to figure out which AE to use on an uploaded image.
 
 
 Step 4:
