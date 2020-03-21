@@ -13,7 +13,7 @@ The core of the pipeline would be a pair of Auto Encoders (AEs), one for each se
 I propose the following steps:
 
 step 1:
-train the AEs to do what they're supposed to. Compare output to input for initial training.
+train one AE to encode and decode womens' faces, and one to encode and decode mens' faces. Compare output to input for initial training.
 
 Step 2:
 Plug the outputs of the AEs into a GAN. Take real inputs, tweak the values in the latent space layer derived from the inputs,
