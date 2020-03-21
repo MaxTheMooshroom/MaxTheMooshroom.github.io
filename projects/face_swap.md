@@ -27,6 +27,7 @@ Step 4:
 Use the starting classifier on the output images to see if they successfully converted
 
 The final pipeline will look like this:
+
 ![AE_PIPELINE](/projects/ae_pipeline.png)
 
 
