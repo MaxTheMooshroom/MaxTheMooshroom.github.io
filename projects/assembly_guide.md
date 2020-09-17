@@ -1,4 +1,4 @@
- ---
+---
 title: A Guide to x32 Assembly
 show-icon: false
 ---
