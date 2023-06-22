@@ -89,7 +89,7 @@ p.vw-window-title {
     border-radius: 0 0 10px 10px;
     padding: 10px;
     padding-bottom: 20px;
-    background-image: linear-gradient(to top, transparent 9px, #B1AFFF 9px, #B1AFFF 10px, transparent 10px);
+    background-image: linear-gradient(to top, transparent 9px, black 9px, black 10px, transparent 10px);
 }
 
 .vw-window-content-border {
@@ -105,3 +105,58 @@ p.vw-window-title {
     background-color: white;
     padding: 10px;
 }
+
+p#page-content-markdown {
+    visibility: hidden;
+}
+
+div#page-content {
+    visibility: hidden;    
+}
+
+div#page-content > h1 {
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+}
+
+div#page-content > h3 {
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+div#page-content > p {
+    font-family: Futura,
+    Trebuchet MS, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+div#page-content > blockquote {
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+div#page-content > pre {
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5667px;
+}
+
