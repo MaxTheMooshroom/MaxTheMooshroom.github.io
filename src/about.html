@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maxine Alexander">
+    <meta name="description" content="Maxine's Portfolio Site">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: add keywords for SEO -->
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./static/css/default.css">
+    <link rel="stylesheet" href="./static/css/vh-window.css">
+
+    <!-- Showdown JS for markdown -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+
+    <title>Maxine's Portfolio</title>
+</head>
+<body>
+    <div class="page-wrapper d-flex flex-column">
+        <nav class="navbar navbar-expand-lg navbar-transparent">
+            <div class="container-fluid">
+                <span class="navbar-brand logo">Maxine Alexander</span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav me-3">
+                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" href="/portfolio">Projects</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid flex-fill d-flex flex-column">
+            <div class="row flex-fill d-flex flex-column">
+                <div class="col-md-8 offset-md-2 flex-fill d-flex flex-column">
+                    <div class="vw-window flex-fill d-flex flex-column">
+                        <div class="vw-window-bar">
+                            <div class="vw-window-bar-circles"></div>
+                            <p class="vw-window-title">About Me</p>
+                        </div>
+                        <div class="vw-window-main">
+                            <div class="vw-window-content-border">
+                                <div class="vw-window-content">
+                                    <p id="page-content-loading">Loading...</p>
+                                    <div id="page-content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        var converter = new showdown.Converter();
+        var content = document.getElementById("page-content");
+
+        fetch(window.location.href.replace(/\.([^/.]+)$/, ".md"))
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(markdown) {
+                content.innerHTML = converter.makeHtml(markdown);
+                content.style.visibility = "visible";
+                document.getElementById("page-content-loading").style.visibility = "hidden";
+            })
+            .catch(function(error) {
+                document.getElementById("page-content-loading").innerText = "Uh oh! Something has gone wrong!";
+                console.log("Error loading markdown file:", error);
+            });
+
+    </script>
+</body>
+</html>

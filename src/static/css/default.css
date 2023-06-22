@@ -1,0 +1,88 @@
+
+@font-face {
+    font-family: "Streamster";
+    src:    url("../fonts/Streamster.ttf") format('embedded-opentype'), /* Internet Explorer */
+            url("../fonts/Streamster.ttf") format('woff2'),             /* Super Modern Browsers */
+            url("../fonts/Streamster.ttf") format('woff'),              /* Pretty Modern Browsers */
+            url("../fonts/Streamster.ttf") format('truetype'),          /* Safari, Android, iOS */
+            url("../fonts/Streamster.ttf") format('svg');               /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "Rocket Rinder";
+    src:    url("../fonts/RocketRinder-yV5d.ttf") format('embedded-opentype'), /* Internet Explorer */
+            url("../fonts/RocketRinder-yV5d.ttf") format('woff2'),             /* Super Modern Browsers */
+            url("../fonts/RocketRinder-yV5d.ttf") format('woff'),              /* Pretty Modern Browsers */
+            url("../fonts/RocketRinder-yV5d.ttf") format('truetype'),          /* Safari, Android, iOS */
+            url("../fonts/RocketRinder-yV5d.ttf") format('svg');               /* Legacy iOS */
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/metropolis-cropped.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    height: 100vh;
+}
+
+span.navbar-brand {
+    font-family:        "Streamster";
+    font-size:          48px;
+    color:              #EA32A0;
+    filter:             drop-shadow(-2px -1px 4px #75FFFF80);
+
+    margin-top: 15px;
+
+    transform:          rotate(-12deg);
+    -webkit-transform:  rotate(-12deg);                                  /* Safari   */
+    -moz-transform:     rotate(-12deg);                                  /* Firefox  */
+    -ms-transform:      rotate(-12deg);                                  /* IE       */
+    -o-transform:       rotate(-12deg);                                  /* Opera    */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);    /* Internet Explorer */
+
+    user-select: none;              /* Prevent text selection */
+    -webkit-touch-callout: none;    /* Disable callout on long-press (iOS) */
+}
+
+.navbar-transparent {
+    background-color: transparent;
+}
+
+div.navbar-nav {
+    padding-right: 22px;
+}
+
+a.nav-link {
+    --bs-navbar-nav-link-padding-x: 22px;
+
+    font-family: "Rocket Rinder";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 28px;
+    
+    color: #FFFFFF;
+    
+    text-shadow: -2px -1px 4px #EA32A0;
+    
+    user-select: none;              /* Prevent text selection */
+    -webkit-touch-callout: none;    /* Disable callout on long-press (iOS) */
+}
+
+span.navbar-brand:hover {
+    color: #EA32A0;     /* Set the hover color to the same color as the default */
+    text-shadow: none;
+}
+
+a.nav-link:hover {
+    color: #75FFFF;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
