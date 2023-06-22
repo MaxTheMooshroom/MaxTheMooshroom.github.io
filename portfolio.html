@@ -64,7 +64,12 @@
         var converter = new showdown.Converter();
         var content = document.getElementById("page-content");
 
-        fetch(window.location.href.replace(/\.([^/.]+)$/, ".md"))
+        var markdown_location = window.location.href.replace(/\.([^/.]+)$/, ".md");
+        if (modifiedURL === currentURL) {
+            modifiedURL += ".md";
+        }
+
+        fetch(markdown_location)
             .then(function(response) {
                 return response.text();
             })
