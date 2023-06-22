@@ -1,0 +1,107 @@
+
+/*
+ *      Special thanks to *Kimberly Zick (@Rummik) for her contributions
+ *      https://github.com/rummik/
+ *
+*/
+
+
+@font-face {
+    font-family: "Press Start 2P";
+    src:    url("../fonts/PressStart2P-Regular.ttf") format('embedded-opentype'), /* Internet Explorer */
+            url("../fonts/PressStart2P-Regular.ttf") format('woff2'),             /* Super Modern Browsers */
+            url("../fonts/PressStart2P-Regular.ttf") format('woff'),              /* Pretty Modern Browsers */
+            url("../fonts/PressStart2P-Regular.ttf") format('truetype'),          /* Safari, Android, iOS */
+            url("../fonts/PressStart2P-Regular.ttf") format('svg');               /* Legacy iOS */
+}
+
+.vw-window {
+    margin-top: 40px;
+    /* height: calc(100vh - 45px); */
+    margin-bottom: 10px;
+}
+
+.vw-window-bar {
+    border-radius: 10px 10px 0px 0px;
+    background-color: #FDFDBD;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.vw-window-bar-circles {
+    --faux-button-size:    16px;
+    --faux-button-margin:  20px;
+    --faux-button-spacing: 20px;
+
+    --faux-button-gradient-border: 100%;
+    --faux-button-gradient-border-subtract:
+        calc(var(--faux-button-gradient-border) - 1px);
+
+    --faux-button:
+        radial-gradient(
+            closest-side,
+            #B1AFFF 0%,
+            #B1AFFF     var(--faux-button-gradient-border-subtract),
+            transparent var(--faux-button-gradient-border)
+        );
+
+    background-image:
+        var(--faux-button),
+        var(--faux-button),
+        var(--faux-button);
+
+    background-size:
+        var(--faux-button-size),
+        var(--faux-button-size),
+        var(--faux-button-size);
+
+    height:             var(--faux-button-size);
+    width:              calc((var(--faux-button-spacing) + var(--faux-button-size) / 2) * 3);
+    background-repeat:  no-repeat, no-repeat, no-repeat;
+    background-position-x:
+        calc((var(--faux-button-spacing) + var(--faux-button-size)/2) * 0),
+        calc((var(--faux-button-spacing) + var(--faux-button-size)/2) * 1),
+        calc((var(--faux-button-spacing) + var(--faux-button-size)/2) * 2);
+    
+    margin-top:     calc(20px - var(--faux-button-size) / 2);
+    margin-left:    calc(var(--faux-button-margin) - var(--faux-button-size) / 2);
+    margin-right:   calc((var(--faux-button-spacing) + var(--faux-button-size) / 2) * -3);
+
+    float: left;
+}
+
+p.vw-window-title {
+    font-family: "Press Start 2P";
+    font-size: 16px;
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 0;
+    width: inherit;
+    height: inherit;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.vw-window-main {
+    width: 100%;
+    height: 100%;
+    background-color: #B8E8FC;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(to top, transparent 9px, #B1AFFF 9px, #B1AFFF 10px, transparent 10px);
+}
+
+.vw-window-content-border {
+    width: 100%;
+    height: 100%;
+    background-color: #B1AFFF;
+    padding: 10px;
+}
+
+.vw-window-content {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+}
