@@ -65,7 +65,7 @@
         var content = document.getElementById("page-content");
 
         var markdown_location = window.location.href.replace(/\.([^/.]+)$/, ".md");
-        if (markdown_location === currentURL) {
+        if (markdown_location === window.location.href) {
             markdown_location += ".md";
         }
 
