@@ -18,7 +18,12 @@
 }
 
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     background: url('../img/metropolis-cropped.jpg') no-repeat center center fixed;
@@ -37,7 +42,7 @@ span.navbar-brand {
     color:              #EA32A0;
     filter:             drop-shadow(-2px -1px 4px #75FFFF80);
 
-    margin-top: 15px;
+    margin-top:     15px;
 
     transform:          rotate(-12deg);
     -webkit-transform:  rotate(-12deg);                                  /* Safari   */
@@ -86,3 +91,10 @@ a.nav-link:hover {
     -webkit-text-stroke-color: black;
 }
 
+img[alt=github] {
+    width: 35px;
+}
+
+img[alt=patreon] {
+    width: 35px;
+}
