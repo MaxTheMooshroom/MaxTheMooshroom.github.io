@@ -48,19 +48,19 @@
                     <div class="vw-window-main d-flex">
                         <div class="flex-fill d-flex flex-row">
                             <div class="port-disks-left d-flex flex-column text-center justify-content-evenly">
-                                <a class="selected" data-filename="portfolio" data-text="Port-%0Afolio" onclick="load_from_element(this);">
+                                <a class="disk selected" data-filename="portfolio" data-text="Port-%0Afolio" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Port-%0Afolio">
                                 </a>
-                                <a data-filename="pmos" data-text="PMOS" onclick="load_from_element(this);">
+                                <a class="disk" data-filename="pmos" data-text="PMOS" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=PMOS">
                                 </a>
-                                <a data-filename="n2dts" data-text="N2DTS" onclick="load_from_element(this);">
+                                <a class="disk" data-filename="n2dts" data-text="N2DTS" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=N2DTS">
                                 </a>
-                                <a data-filename="dtc" data-text="DTC" onclick="load_from_element(this);">
+                                <a class="disk" data-filename="dtc" data-text="DTC" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
                                 </a>
-                                <a data-filename="doorbell" data-text="Smart%20Door-%0Abell" onclick="load_from_element(this);">
+                                <a class="disk" data-filename="doorbell" data-text="Smart%20Door-%0Abell" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Smart%0ADoor-%0Abell">
                                 </a>
                             </div>
@@ -72,19 +72,19 @@
                                 </div>
                             </div>
                             <div class="port-disks-right d-flex flex-column text-center justify-content-evenly">
-                                <a data-filename="pmos">
+                                <a class="disk" data-filename="pmos">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=PMOS">
                                 </a>
-                                <a data-filename="N2DTS">
+                                <a class="disk" data-filename="N2DTS">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=N2DTS">
                                 </a>
-                                <a data-filename="dtc">
+                                <a class="disk" data-filename="dtc">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
                                 </a>
-                                <a data-filename="dtc">
+                                <a class="disk" data-filename="dtc">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
                                 </a>
-                                <a data-filename="dtc">
+                                <a class="disk" data-filename="dtc">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
                                 </a>
                             </div>
@@ -103,6 +103,16 @@
         var content = document.getElementById("page-content");
         var current_selected = document.querySelector("[data-filename=portfolio]");
         var map = {};
+
+        fetch("/static/markdown/wip.md")
+            .then(function(response) {
+                console.log("Attempting to fetch wip markdown");
+                map["wip"] = response.text();
+            })
+            .catch(function(error) {
+                document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
+                console.log("Error loading markdown file:", error);
+            });
 
         function selector_highlight(element) {
             current_selected.classList.remove("selected");
@@ -129,7 +139,10 @@
             fetch(markdown_location)
                 .then(function(response) {
                     console.log("Attempting to fetch markdown:", markdown_location);
-                    return response.text();
+                    if (response.ok)
+                        return response.text();
+                    else
+                        return map["wip"];
                 })
                 .then(function(markdown) {
                     map[markdown_location] = converter.makeHtml(markdown);
@@ -137,7 +150,7 @@
                     content.innerHTML = map[markdown_location];
                 })
                 .catch(function(error) {
-                    document.getElementById("page-content-loading").innerText = "Uh oh! Something has gone wrong!";
+                    document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
                     console.log("Error loading markdown file:", error);
                 });
         };
@@ -151,6 +164,19 @@
             current_selected.children[0].getSVGDocument().children[0].classList.replace("purple", "teal");
             load("/static/markdown/portfolio.md");
         });
+
+        var disks = document.getElementsByClassName("disk");
+        for (var i = 0; i < disks.length; i++) {
+            let disk = disks[i];
+            disk.addEventListener("mouseenter", function() {
+                if (disk !== current_selected)
+                    disk.children[0].getSVGDocument().children[0].classList.replace("purple", "teal");
+            });
+            disk.addEventListener("mouseleave", function() {
+                if (disk !== current_selected)
+                    disk.children[0].getSVGDocument().children[0].classList.replace("teal", "purple");
+            });
+        }
 
     </script>
 </body>

@@ -99,6 +99,10 @@ p.vw-window-title {
     margin-left: 5px;
 }
 
+a.disk {
+    cursor: pointer;
+}
+
 a embed {
     pointer-events: none;
 }
@@ -145,8 +149,7 @@ div#page-content > h3 {
 }
 
 div#page-content > p {
-    font-family: Futura,
-    Trebuchet MS, Arial, sans-serif;
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-variant: normal;
