@@ -20,7 +20,7 @@
     <title>Maxine's Portfolio</title>
 </head>
 <body>
-    <div class="page-wrapper d-flex flex-column">
+    <div class="page-wrapper d-flex flex-column" style="max-height: 100vh; height: 100vh;">
         <nav class="navbar navbar-expand-lg navbar-transparent">
             <div class="container-fluid">
                 <span class="navbar-brand logo">Maxine Alexander</span>
@@ -40,32 +40,53 @@
 
         <div class="container-fluid flex-fill d-flex flex-column">
             <div class="row flex-fill d-flex flex-column">
-                <div class="col-md-8 offset-md-2 flex-fill d-flex flex-column">
-                    <div class="vw-window flex-fill d-flex flex-column">
-                        <div class="vw-window-bar">
-                            <div class="vw-window-bar-circles"></div>
-                            <p class="vw-window-title">Projects</p>
-                        </div>
-                        <div class="vw-window-main d-flex">
-                            <div class="row flex-fill d-flex flex-row">
-                                <div class="col-md-2 d-flex flex-column text-center justify-content-evenly">
-                                    <a href="#"><img src="./static/img/floppy-pastel-iso.svg"></a>
-                                    <a href="#"><img src="./static/img/floppy-pastel-iso.svg"></a>
-                                    <a href="#"><img src="./static/img/floppy-pastel-iso.svg"></a>
-                                </div>
-                                <div class="col-md-8 d-flex flex-column">
-                                    <div class="vw-window-content-border">
-                                        <div class="vw-window-content">
-                                            <p id="page-content-loading">Loading...</p>
-                                            <div id="page-content"></div>
-                                        </div>
+                <div class="vw-window col-md-8 offset-md-2 flex-fill d-flex flex-column">
+                    <div class="vw-window-bar">
+                        <div class="vw-window-bar-circles"></div>
+                        <p class="vw-window-title">Projects</p>
+                    </div>
+                    <div class="vw-window-main d-flex">
+                        <div class="flex-fill d-flex flex-row">
+                            <div class="port-disks-left d-flex flex-column text-center justify-content-evenly">
+                                <a class="selected" data-filename="portfolio" data-text="Port-%0Afolio" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Port-%0Afolio">
+                                </a>
+                                <a data-filename="pmos" data-text="PMOS" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=PMOS">
+                                </a>
+                                <a data-filename="n2dts" data-text="N2DTS" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=N2DTS">
+                                </a>
+                                <a data-filename="dtc" data-text="DTC" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
+                                </a>
+                                <a data-filename="doorbell" data-text="Smart%20Door-%0Abell" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Smart%0ADoor-%0Abell">
+                                </a>
+                            </div>
+                            <div class="d-flex flex-fill flex-column">
+                                <div class="vw-window-content-border">
+                                    <div class="vw-window-content overflow-auto">
+                                        <div id="page-content">Loading...</div>
                                     </div>
                                 </div>
-                                <div class="col-md-2 d-flex flex-column text-center justify-content-evenly">
-                                    <a href="#"><img src="./static/img/floppy-pastel-iso.svg"></a>
-                                    <a href="#"><img src="./static/img/floppy-pastel-iso.svg"></a>
-                                    <a href="#"><img src="./static/img/floppy-pastel-iso.svg"></a>
-                                </div>
+                            </div>
+                            <div class="port-disks-right d-flex flex-column text-center justify-content-evenly">
+                                <a data-filename="pmos">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=PMOS">
+                                </a>
+                                <a data-filename="N2DTS">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=N2DTS">
+                                </a>
+                                <a data-filename="dtc">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
+                                </a>
+                                <a data-filename="dtc">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
+                                </a>
+                                <a data-filename="dtc">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -80,25 +101,56 @@
     <script>
         var converter = new showdown.Converter();
         var content = document.getElementById("page-content");
+        var current_selected = document.querySelector("[data-filename=portfolio]");
+        var map = {};
 
-        var markdown_location = window.location.href.replace(/\.([^/.]+)$/, ".md");
-        if (markdown_location === window.location.href) {
-            markdown_location += ".md";
+        function selector_highlight(element) {
+            current_selected.classList.remove("selected");
+            current_selected.children[0].getSVGDocument().children[0].classList.replace("teal", "purple");
+
+            current_selected = element;
+
+            current_selected.classList.add("selected");
+            current_selected.children[0].getSVGDocument().children[0].classList.replace("purple", "teal");
+        };
+
+        function load(markdown_location) {
+            if (markdown_location.search(".md") === -1) {
+                markdown_location += ".md";
+            }
+
+            if (markdown_location in map) {
+                content.innerHTML = map[markdown_location];
+                return;
+            }
+
+            console.log("Attempting to fetch:", markdown_location);
+
+            fetch(markdown_location)
+                .then(function(response) {
+                    console.log("Attempting to fetch markdown:", markdown_location);
+                    return response.text();
+                })
+                .then(function(markdown) {
+                    map[markdown_location] = converter.makeHtml(markdown);
+
+                    content.innerHTML = map[markdown_location];
+                })
+                .catch(function(error) {
+                    document.getElementById("page-content-loading").innerText = "Uh oh! Something has gone wrong!";
+                    console.log("Error loading markdown file:", error);
+                });
+        };
+
+        function load_from_element(element) {
+            load("/static/markdown/" + element.dataset.filename + ".md");
+            selector_highlight(element);
         }
 
-        fetch(markdown_location)
-            .then(function(response) {
-                return response.text();
-            })
-            .then(function(markdown) {
-                content.innerHTML = converter.makeHtml(markdown);
-                content.style.visibility = "visible";
-                document.getElementById("page-content-loading").style.visibility = "hidden";
-            })
-            .catch(function(error) {
-                document.getElementById("page-content-loading").innerText = "Uh oh! Something has gone wrong!";
-                console.log("Error loading markdown file:", error);
-            });
+        current_selected.children[0].addEventListener("load", function() {
+            current_selected.children[0].getSVGDocument().children[0].classList.replace("purple", "teal");
+            load("/static/markdown/portfolio.md");
+        });
 
     </script>
 </body>
