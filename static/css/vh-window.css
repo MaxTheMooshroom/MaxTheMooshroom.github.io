@@ -103,6 +103,10 @@ a.disk {
     cursor: pointer;
 }
 
+a.disk.no-select {
+    cursor: default;
+}
+
 a embed {
     pointer-events: none;
 }
