@@ -24,6 +24,7 @@ html {
 
 body {
     height: 100%;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     background: url('../img/metropolis-cropped.jpg') no-repeat center center fixed;
