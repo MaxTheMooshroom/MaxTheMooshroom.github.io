@@ -51,17 +51,17 @@
                                 <a class="disk selected" data-filename="portfolio" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Port-%0Afolio">
                                 </a>
+                                <a class="disk" data-filename="iris" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Smart%0ADoor-%0Abell">
+                                </a>
                                 <a class="disk" data-filename="pmos" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=PMOS">
                                 </a>
-                                <a class="disk" data-filename="n2dts" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=N2DTS">
+                                <a class="disk no-select" data-filename="">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?">
                                 </a>
-                                <a class="disk" data-filename="dtc" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
-                                </a>
-                                <a class="disk" data-filename="doorbell" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Smart%0ADoor-%0Abell">
+                                <a class="disk no-select" data-filename="">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?">
                                 </a>
                             </div>
                             <div class="d-flex flex-fill flex-column">
@@ -72,20 +72,20 @@
                                 </div>
                             </div>
                             <div class="port-disks-right d-flex flex-column text-center justify-content-evenly">
-                                <a class="disk" data-filename="reagb" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=REAGB%0A(RIGBY)">
-                                </a>
-                                <a class="disk" data-filename="splice" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Splice">
-                                </a>
-                                <a class="disk" data-filename="tracking" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Full-%0ABody%0ATracking">
+                                <a class="disk" data-filename="meal-planner" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Meal%0APlan-%0Aner">
                                 </a>
                                 <a class="disk" data-filename="dtc" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=SFI%2F%0ABF">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
                                 </a>
-                                <a class="disk no-select" data-filename="dtc">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg">
+                                <a class="disk" data-filename="n2dts" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=N2DTS">
+                                </a>
+                                <a class="disk no-select" data-filename="">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?">
+                                </a>
+                                <a class="disk no-select" data-filename="">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?">
                                 </a>
                             </div>
                         </div>
@@ -102,13 +102,13 @@
         var converter = new showdown.Converter();
         var content = document.getElementById("page-content");
         var current_selected = document.querySelector("[data-filename=portfolio]");
-        var map = {};
+        var markdown_map = {}; // map from markdown name to markdown contents
 
         fetch("/static/markdown/wip.md")
             .then(function(response) {
                 if (response.ok) {
                     console.log("Attempting to fetch wip markdown");
-                    map["wip"] = response.text();
+                    markdown_map["wip"] = response.text();
                 } else {
                     document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
                     console.log("Error loading wip markdown:", error);
@@ -123,7 +123,7 @@
             .then(function(response) {
                 if (response.ok) {
                     console.log("Attempting to fetch error markdown");
-                    map["error"] = response.text();
+                    markdown_map["error"] = response.text();
                 } else {
                     document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
                     console.log("Error loading error markdown:", error);
@@ -149,8 +149,8 @@
                 markdown_location += ".md";
             }
 
-            if (markdown_location in map) {
-                content.innerHTML = map[markdown_location];
+            if (markdown_location in markdown_map) {
+                content.innerHTML = markdown_map[markdown_location];
                 return;
             }
 
@@ -163,14 +163,14 @@
                         return response.text();
                     else
                         if (response.status === 404)
-                            return map["wip"];
+                            return markdown_map["wip"];
                         else
-                            return map["error"]
+                            return markdown_map["error"]
                 })
                 .then(function(markdown) {
-                    map[markdown_location] = converter.makeHtml(markdown);
+                    markdown_map[markdown_location] = converter.makeHtml(markdown);
 
-                    content.innerHTML = map[markdown_location];
+                    content.innerHTML = markdown_map[markdown_location];
                 })
                 .catch(function(error) {
                     document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
