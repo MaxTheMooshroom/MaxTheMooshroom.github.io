@@ -2,7 +2,7 @@
 # BASHful
 
 <a href="#bashful">BASHful</a>
-is a static analysis tool for bash, intended as an alternative to
+is a static code analyzer for bash, intended as an alternative to
 <a href="https://www.shellcheck.net" target="_blank">ShellCheck</a>. However,
 while ShellCheck is written in Haskell, BASHful is written purely in bash.
 

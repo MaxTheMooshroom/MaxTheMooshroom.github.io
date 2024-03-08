@@ -24,7 +24,7 @@ nixpkgs, else it is accessed via `nixpkgs-future.<version>.<package>`
     - A quick and easy way to analyze your bash scripts for errors and have it refactor
 them if desired
 - ([DHelper](#dhelper))         A CLI developer tool for managing environments
-(**ACTIVE DEVELOPMENT**)
+(**HIATUS**)
     - A command-line tool to help developers manage their projects by setting up tasks that
 can be operated as if dhelper is a task runner of sorts, or you can use DHelper as a full
 build system (build system functionality still being developed)
