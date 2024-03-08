@@ -48,7 +48,7 @@
                     <div class="vw-window-main d-flex">
                         <div class="flex-fill d-flex flex-row">
                             <div class="port-disks-left d-flex flex-column text-center justify-content-evenly">
-                                <a class="disk" data-filename="portfolio" onclick="load_from_element(this);">
+                                <a class="disk" data-filename="overview" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Over-%0Aview">
                                 </a>
                                 <a class="disk" data-filename="iris" onclick="load_from_element(this);">
@@ -103,8 +103,8 @@
         var content = document.getElementById("page-content");
         var destination = window.location.hash.substr(1);
         if (destination === "") {
-            destination = "portfolio";
-            window.location.hash = "#portfolio";
+            destination = "overview";
+            window.location.hash = "#overview";
         }
         var current_selected = document.querySelector(`[data-filename=${destination}]`);
         var markdown_map = {}; // map from markdown name to markdown contents
