@@ -50,6 +50,7 @@
             # tree
             # zlib
             # python
+            nodejs_20
             sass
           ];
 

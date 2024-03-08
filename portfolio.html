@@ -48,14 +48,14 @@
                     <div class="vw-window-main d-flex">
                         <div class="flex-fill d-flex flex-row">
                             <div class="port-disks-left d-flex flex-column text-center justify-content-evenly">
-                                <a class="disk selected" data-filename="portfolio" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Port-%0Afolio">
+                                <a class="disk" data-filename="portfolio" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Over-%0Aview">
                                 </a>
                                 <a class="disk" data-filename="iris" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Smart%0ADoor-%0Abell">
                                 </a>
-                                <a class="disk" data-filename="pmos" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=PMOS">
+                                <a class="disk" data-filename="nixpkgs" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=nix-%0Apkgs">
                                 </a>
                                 <a class="disk no-select" data-filename="">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?">
@@ -72,14 +72,14 @@
                                 </div>
                             </div>
                             <div class="port-disks-right d-flex flex-column text-center justify-content-evenly">
-                                <a class="disk" data-filename="meal-planner" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Meal%0APlan-%0Aner">
+                                <a class="disk" data-filename="bashful" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=BASH-%0Aful">
+                                </a>
+                                <a class="disk" data-filename="dhelper" onclick="load_from_element(this);">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DHelper">
                                 </a>
                                 <a class="disk" data-filename="dtc" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=DTC">
-                                </a>
-                                <a class="disk" data-filename="n2dts" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=N2DTS">
                                 </a>
                                 <a class="disk no-select" data-filename="">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?">
@@ -101,7 +101,12 @@
     <script>
         var converter = new showdown.Converter();
         var content = document.getElementById("page-content");
-        var current_selected = document.querySelector("[data-filename=portfolio]");
+        var destination = window.location.hash.substr(1);
+        if (destination === "") {
+            destination = "portfolio";
+            window.location.hash = "#portfolio";
+        }
+        var current_selected = document.querySelector(`[data-filename=${destination}]`);
         var markdown_map = {}; // map from markdown name to markdown contents
 
         fetch("/static/markdown/wip.md")
@@ -159,8 +164,9 @@
             fetch(markdown_location)
                 .then(function(response) {
                     console.log("Attempting to fetch markdown:", markdown_location);
-                    if (response.ok)
+                    if (response.ok) {
                         return response.text();
+                    }
                     else
                         if (response.status === 404)
                             return markdown_map["wip"];
@@ -180,13 +186,24 @@
 
         function load_from_element(element) {
             load("/static/markdown/" + element.dataset.filename + ".md");
+            window.location.hash = `#${element.dataset.filename}`;
             selector_highlight(element);
         }
 
         current_selected.children[0].addEventListener("load", function() {
             current_selected.children[0].getSVGDocument().children[0].classList.replace("purple", "teal");
-            load("/static/markdown/portfolio.md");
+            current_selected.classList.add("selected");
+            load(`/static/markdown/${destination}.md`);
         });
+
+        function hash_updated() {
+            current_selected.children[0].getSVGDocument().children[0].classList.replace("teal", "purple");
+            current_selected.classList.remove("selected");
+            destination = window.location.hash.substr(1);
+            current_selected = document.querySelector(`[data-filename=${destination}]`);
+            load_from_element(current_selected);            
+        }
+        window.addEventListener('hashchange', hash_updated);
 
         var disks = document.getElementsByClassName("disk");
         for (var i = 0; i < disks.length; i++) {
@@ -200,6 +217,11 @@
                     disk.children[0].getSVGDocument().children[0].classList.replace("teal", "purple");
             });
         }
+
+        // if (destination === "") {
+        //     window.location.hash = "#portfolio";
+        //     hash_updated();
+        // }
 
     </script>
 </body>
