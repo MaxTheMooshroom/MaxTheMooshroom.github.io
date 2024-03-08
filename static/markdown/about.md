@@ -19,8 +19,7 @@ to a lack of knowledge.
 
 I've worked with a variety of devices, from standardized SBCs and SoMs, to custom microcontroller
 boards with a variety of user requirements and constraints. Architectures I've used range from
-various ARM `cortex A` or `cortex M` processors, to `x86_64`, to `riscv64`, to `STM32`,
-to `PIC`. 
+various ARM `cortex A` or `cortex M` processors, to `x86_64`, `riscv32/64`, `STM32`, and `PIC`.
 
 If you have any questions or otherwise want to reach out, you can contact me using the info found
 [here](/contact).
