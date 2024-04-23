@@ -9,11 +9,14 @@ text set in the data-text attribute. */
   column-gap: 6em;
   transform-origin: center;
   transform: rotate(8deg);
-  -webkit-transform: rotate(8deg); /* Safari   */
-  -moz-transform: rotate(8deg); /* Firefox  */
-  -ms-transform: rotate(8deg); /* IE       */
-  -o-transform: rotate(8deg); /* Opera    */
-}
+  -webkit-transform: rotate(8deg);
+  /* Safari   */
+  -moz-transform: rotate(8deg);
+  /* Firefox  */
+  -ms-transform: rotate(8deg);
+  /* IE       */
+  -o-transform: rotate(8deg);
+  /* Opera    */ }
 
 .glitch {
   position: relative;
@@ -22,38 +25,37 @@ text set in the data-text attribute. */
   font-family: "Streamster";
   text-align: center;
   color: #E0E722;
-  filter: drop-shadow(-2px -1px 4px rgba(117, 255, 255, 0.5019607843));
-  user-select: none; /* Prevent text selection */
-  -webkit-touch-callout: none; /* Disable callout on long-press (iOS) */
-}
-.glitch::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  left: 2px;
-  text-shadow: -2px 0 #ff00c1;
-  /* Creates an initial clip for our glitch. This works in
-  a typical top,right,bottom,left fashion and creates a mask
-  to only show a certain part of the glitch at a time. */
-  clip: rect(44px, 450px, 56px, 0);
-  /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
-  with an alternating animation to keep things fresh. */
-  animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  left: -2px;
-  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-  animation: glitch-anim2 1s infinite linear alternate-reverse;
-}
+  filter: drop-shadow(-2px -1px 4px #75FFFF80);
+  user-select: none;
+  /* Prevent text selection */
+  -webkit-touch-callout: none;
+  /* Disable callout on long-press (iOS) */ }
+  .glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    /* Creates an initial clip for our glitch. This works in
+    a typical top,right,bottom,left fashion and creates a mask
+    to only show a certain part of the glitch at a time. */
+    clip: rect(44px, 450px, 56px, 0);
+    /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
+    with an alternating animation to keep things fresh. */
+    animation: glitch-anim 5s infinite linear alternate-reverse; }
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    animation: glitch-anim2 1s infinite linear alternate-reverse; }
 
 /* Creates an animation with 20 steaps. For each step, it calculates 
 a percentage for the specific step. It then generates a random clip
@@ -61,173 +63,131 @@ box to be used for the random glitch effect. Also adds a very subtle
 skew to change the 'thickness' of the glitch.*/
 @keyframes glitch-anim {
   0% {
-    clip: rect(9vh, 9999px, 31vh, -9999px);
-    transform: skew(0.4deg);
-  }
+    clip: rect(8vh, 9999px, 29vh, -9999px);
+    transform: skew(0.82deg); }
   5% {
-    clip: rect(3vh, 9999px, 18vh, -9999px);
-    transform: skew(0.6deg);
-  }
+    clip: rect(10vh, 9999px, 2vh, -9999px);
+    transform: skew(0.5deg); }
   10% {
-    clip: rect(4vh, 9999px, 49vh, -9999px);
-    transform: skew(0.32deg);
-  }
+    clip: rect(1vh, 9999px, 9vh, -9999px);
+    transform: skew(0.15deg); }
   15% {
-    clip: rect(8vh, 9999px, 3vh, -9999px);
-    transform: skew(0.91deg);
-  }
+    clip: rect(5vh, 9999px, 11vh, -9999px);
+    transform: skew(0.96deg); }
   20% {
-    clip: rect(1vh, 9999px, 46vh, -9999px);
-    transform: skew(0.93deg);
-  }
+    clip: rect(9vh, 9999px, 42vh, -9999px);
+    transform: skew(0.51deg); }
   25% {
-    clip: rect(4vh, 9999px, 30vh, -9999px);
-    transform: skew(0.72deg);
-  }
+    clip: rect(7vh, 9999px, 30vh, -9999px);
+    transform: skew(0.17deg); }
   30% {
-    clip: rect(2vh, 9999px, 1vh, -9999px);
-    transform: skew(0.69deg);
-  }
+    clip: rect(7vh, 9999px, 25vh, -9999px);
+    transform: skew(0.44deg); }
   35% {
-    clip: rect(1vh, 9999px, 1vh, -9999px);
-    transform: skew(0.34deg);
-  }
+    clip: rect(3vh, 9999px, 21vh, -9999px);
+    transform: skew(0.28deg); }
   40% {
-    clip: rect(10vh, 9999px, 24vh, -9999px);
-    transform: skew(0.82deg);
-  }
+    clip: rect(9vh, 9999px, 47vh, -9999px);
+    transform: skew(0.23deg); }
   45% {
-    clip: rect(9vh, 9999px, 39vh, -9999px);
-    transform: skew(0.44deg);
-  }
+    clip: rect(6vh, 9999px, 32vh, -9999px);
+    transform: skew(0.42deg); }
   50% {
-    clip: rect(1vh, 9999px, 17vh, -9999px);
-    transform: skew(0.43deg);
-  }
+    clip: rect(2vh, 9999px, 45vh, -9999px);
+    transform: skew(0.62deg); }
   55% {
-    clip: rect(9vh, 9999px, 50vh, -9999px);
-    transform: skew(0.43deg);
-  }
+    clip: rect(3vh, 9999px, 16vh, -9999px);
+    transform: skew(0.51deg); }
   60% {
-    clip: rect(8vh, 9999px, 4vh, -9999px);
-    transform: skew(0.35deg);
-  }
+    clip: rect(2vh, 9999px, 11vh, -9999px);
+    transform: skew(0.47deg); }
   65% {
-    clip: rect(7vh, 9999px, 7vh, -9999px);
-    transform: skew(0.02deg);
-  }
+    clip: rect(3vh, 9999px, 20vh, -9999px);
+    transform: skew(0.37deg); }
   70% {
-    clip: rect(1vh, 9999px, 1vh, -9999px);
-    transform: skew(0.43deg);
-  }
+    clip: rect(6vh, 9999px, 37vh, -9999px);
+    transform: skew(0.45deg); }
   75% {
-    clip: rect(5vh, 9999px, 7vh, -9999px);
-    transform: skew(0.79deg);
-  }
+    clip: rect(7vh, 9999px, 47vh, -9999px);
+    transform: skew(0.54deg); }
   80% {
-    clip: rect(5vh, 9999px, 10vh, -9999px);
-    transform: skew(0.48deg);
-  }
+    clip: rect(6vh, 9999px, 1vh, -9999px);
+    transform: skew(0.99deg); }
   85% {
-    clip: rect(3vh, 9999px, 14vh, -9999px);
-    transform: skew(0.27deg);
-  }
+    clip: rect(7vh, 9999px, 32vh, -9999px);
+    transform: skew(0.92deg); }
   90% {
-    clip: rect(8vh, 9999px, 49vh, -9999px);
-    transform: skew(0.53deg);
-  }
+    clip: rect(8vh, 9999px, 36vh, -9999px);
+    transform: skew(0.96deg); }
   95% {
-    clip: rect(7vh, 9999px, 44vh, -9999px);
-    transform: skew(0.32deg);
-  }
+    clip: rect(8vh, 9999px, 48vh, -9999px);
+    transform: skew(0.44deg); }
   100% {
-    clip: rect(3vh, 9999px, 44vh, -9999px);
-    transform: skew(0.78deg);
-  }
-}
+    clip: rect(9vh, 9999px, 50vh, -9999px);
+    transform: skew(0.71deg); } }
 @keyframes glitch-anim2 {
   0% {
-    clip: rect(6vh, 9999px, 29vh, -9999px);
-    transform: skew(0.59deg);
-  }
+    clip: rect(6vh, 9999px, 39vh, -9999px);
+    transform: skew(0.9deg); }
   5% {
-    clip: rect(2vh, 9999px, 11vh, -9999px);
-    transform: skew(0.82deg);
-  }
+    clip: rect(3vh, 9999px, 39vh, -9999px);
+    transform: skew(0.42deg); }
   10% {
-    clip: rect(4vh, 9999px, 38vh, -9999px);
-    transform: skew(0.99deg);
-  }
+    clip: rect(3vh, 9999px, 36vh, -9999px);
+    transform: skew(0.19deg); }
   15% {
-    clip: rect(8vh, 9999px, 4vh, -9999px);
-    transform: skew(0.1deg);
-  }
+    clip: rect(9vh, 9999px, 16vh, -9999px);
+    transform: skew(0.63deg); }
   20% {
-    clip: rect(5vh, 9999px, 14vh, -9999px);
-    transform: skew(0.74deg);
-  }
+    clip: rect(2vh, 9999px, 43vh, -9999px);
+    transform: skew(0.63deg); }
   25% {
-    clip: rect(10vh, 9999px, 21vh, -9999px);
-    transform: skew(0.46deg);
-  }
+    clip: rect(9vh, 9999px, 17vh, -9999px);
+    transform: skew(0.21deg); }
   30% {
-    clip: rect(6vh, 9999px, 19vh, -9999px);
-    transform: skew(0.33deg);
-  }
+    clip: rect(8vh, 9999px, 48vh, -9999px);
+    transform: skew(0.29deg); }
   35% {
-    clip: rect(2vh, 9999px, 37vh, -9999px);
-    transform: skew(0.26deg);
-  }
+    clip: rect(9vh, 9999px, 25vh, -9999px);
+    transform: skew(0.76deg); }
   40% {
-    clip: rect(4vh, 9999px, 1vh, -9999px);
-    transform: skew(0.26deg);
-  }
+    clip: rect(10vh, 9999px, 14vh, -9999px);
+    transform: skew(0.67deg); }
   45% {
-    clip: rect(6vh, 9999px, 10vh, -9999px);
-    transform: skew(0.24deg);
-  }
+    clip: rect(4vh, 9999px, 4vh, -9999px);
+    transform: skew(0.68deg); }
   50% {
-    clip: rect(8vh, 9999px, 38vh, -9999px);
-    transform: skew(0.8deg);
-  }
+    clip: rect(5vh, 9999px, 30vh, -9999px);
+    transform: skew(0.67deg); }
   55% {
-    clip: rect(5vh, 9999px, 41vh, -9999px);
-    transform: skew(0.74deg);
-  }
+    clip: rect(9vh, 9999px, 22vh, -9999px);
+    transform: skew(0.28deg); }
   60% {
-    clip: rect(1vh, 9999px, 35vh, -9999px);
-    transform: skew(0.09deg);
-  }
+    clip: rect(1vh, 9999px, 9vh, -9999px);
+    transform: skew(0.93deg); }
   65% {
-    clip: rect(3vh, 9999px, 28vh, -9999px);
-    transform: skew(0.33deg);
-  }
+    clip: rect(10vh, 9999px, 27vh, -9999px);
+    transform: skew(0.27deg); }
   70% {
-    clip: rect(6vh, 9999px, 2vh, -9999px);
-    transform: skew(0.79deg);
-  }
+    clip: rect(1vh, 9999px, 20vh, -9999px);
+    transform: skew(0.21deg); }
   75% {
-    clip: rect(10vh, 9999px, 50vh, -9999px);
-    transform: skew(0.17deg);
-  }
+    clip: rect(10vh, 9999px, 34vh, -9999px);
+    transform: skew(0.97deg); }
   80% {
-    clip: rect(4vh, 9999px, 33vh, -9999px);
-    transform: skew(0.44deg);
-  }
+    clip: rect(1vh, 9999px, 26vh, -9999px);
+    transform: skew(0.29deg); }
   85% {
-    clip: rect(6vh, 9999px, 18vh, -9999px);
-    transform: skew(0.33deg);
-  }
+    clip: rect(8vh, 9999px, 30vh, -9999px);
+    transform: skew(0.26deg); }
   90% {
-    clip: rect(5vh, 9999px, 5vh, -9999px);
-    transform: skew(0.48deg);
-  }
+    clip: rect(3vh, 9999px, 49vh, -9999px);
+    transform: skew(0.43deg); }
   95% {
-    clip: rect(6vh, 9999px, 21vh, -9999px);
-    transform: skew(0.5deg);
-  }
+    clip: rect(8vh, 9999px, 45vh, -9999px);
+    transform: skew(0.6deg); }
   100% {
-    clip: rect(7vh, 9999px, 45vh, -9999px);
-    transform: skew(0.86deg);
-  }
-}
+    clip: rect(10vh, 9999px, 36vh, -9999px);
+    transform: skew(0.71deg); } }
+
+/*# sourceMappingURL=glitch.css.map */

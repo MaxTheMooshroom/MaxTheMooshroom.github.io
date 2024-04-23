@@ -200,47 +200,55 @@
 
         const label = document.getElementById('floppy-label');
         const labelText = document.getElementById('floppy-label-text');
-
+        
+        const lines = text.split('\n');
+        
         // remove the placeholder lines
         document.getElementById('label-placeholder-lines').remove();
 
-        // create a tspan node for each line of text
-        const lines = text.split('\n');
 
-        for (let i = 0; i < lines.length; i++) {
-            const tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-            tspan.textContent = lines[i];
+        function handle_load() {
+            // clear text contents
+            labelText.innerHTML = '';
 
-            if (i > 0)
-                tspan.setAttribute('dy', '1.2em');
+            // create a tspan node for each line of text
+            for (let i = 0; i < lines.length; i++) {
+                const tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+                tspan.textContent = lines[i];
 
-            // center the text by setting the x attribute to originX
-            tspan.setAttribute('x', originX);
+                if (i > 0)
+                    tspan.setAttribute('dy', '1.2em');
 
-            labelText.appendChild(tspan);
+                // center the text by setting the x attribute to originX
+                tspan.setAttribute('x', originX);
+
+                labelText.appendChild(tspan);
+            }
+
+            // get bounding boxes -- this needs to be done after setting the text
+            // or we'll get the bounding box of an empty text element
+            const textBBox = labelText.getBBox();
+
+            // calculate the scale factor to fit the text into the floppy label
+            // we start by comparing the aspect ratios of the label and the text
+            // and then scale the text to best fit the label
+            const scale = (maxWidth / maxHeight) > (textBBox.width / textBBox.height) ?
+                (maxHeight - padding) / textBBox.height :
+                (maxWidth - padding) / textBBox.width;
+
+            // center the text vertically
+            labelText.setAttribute('text-anchor', 'middle');
+            labelText.setAttribute('dominant-baseline', 'middle');
+            labelText.setAttribute('y', originY - textBBox.height / lines.length / 2 * scale * (lines.length - 1));
+
+            // set the font size
+            labelText.setAttribute('font-size', `${scale}em`);
+
+            // rotate the label
+            labelText.setAttribute('transform', `rotate(${rotation} ${originX} ${originY})`);
         }
-
-        // get bounding boxes -- this needs to be done after setting the text
-        // or we'll get the bounding box of an empty text element
-        const textBBox = labelText.getBBox();
-
-        // calculate the scale factor to fit the text into the floppy label
-        // we start by comparing the aspect ratios of the label and the text
-        // and then scale the text to best fit the label
-        const scale = (maxWidth / maxHeight) > (textBBox.width / textBBox.height) ?
-            (maxHeight - padding) / textBBox.height :
-            (maxWidth - padding) / textBBox.width;
-
-        // center the text vertically
-        labelText.setAttribute('text-anchor', 'middle');
-        labelText.setAttribute('dominant-baseline', 'middle');
-        labelText.setAttribute('y', originY - textBBox.height / lines.length / 2 * scale * (lines.length - 1));
-
-        // set the font size
-        labelText.setAttribute('font-size', `${scale}em`);
-
-        // rotate the label
-        labelText.setAttribute('transform', `rotate(${rotation} ${originX} ${originY})`);
+        let _font = new FontFace("PressStart2P", "url(../fonts/PressStart2P.ttf)");
+        document.fonts.ready.then(handle_load);
         // ]]>
     </script>
 </svg>

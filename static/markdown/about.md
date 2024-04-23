@@ -1,17 +1,25 @@
 
+Howdy! I'm a developer working to open the embedded systems communities (hardware, software, etc)
+to go further with fewer resources. With a passion for working with others to help remove barriers,
+I strive to develop powerful tools and frameworks that allow developers to access the full
+potential of embedded systems. Hailing from Pittsburgh PA, USA, I've committed to doing what I can
+to increase accessibility and foster a vibrant open-source developer community.
 
-Hello, I'm Maxine, a passionate and versatile technologist with a deep-rooted love for all things tech. Allow me to take you on a journey through my expertise and experiences!
+I have a fairly diverse background, having spent time as a software teacher, a CTO, an AI researcher,
+and now as an embedded software engineer (with several stints designing / working with embedded
+hardware). I enjoy a wide variety of types of software development! I even designed and built this
+site myself (with some notable help from a friend in a couple of places that are documented)!
 
-From a young age, my innate curiosity led me to dismantle electronics and unravel their mysteries. This early fascination set the stage for a lifelong exploration of the tech industry. As a software engineer, I've honed my skills across various domains, mastering the art of building robust solutions.
+In my free time, I work as a team lead for a group that's trying to make positive societal changes
+by changing access to technology both physically and referring to information or documentation. 
+Whether intentionally or not, much of the embedded world is gatekept from society, mostly by means of
+information access. If you want to get deep into the field, you're going to be putting in a *lot* of
+leg-work. We think that it's unnecessary to require so much effort, when that effort is primarily due
+to a lack of knowledge.
 
-In my projects, I leverage various software tools such as KiCAD and buildroot to bring ideas to life. Additionally, I have hands-on experience working with microcontrollers like PIC, STM32, TI, and RP2040, as well as platforms like Arduino and Raspberry Pi. With these I have run FreeRTOS, ZephyrOS, and more, and have built software to run both on those and on baremetal devices, where appropriate. These resources have been invaluable in the realization of my endeavors.
+I've worked with a variety of devices, from standardized SBCs and SoMs, to custom microcontroller
+boards with a variety of user requirements and constraints. Architectures I've used range from
+various ARM `cortex A` or `cortex M` processors, to `x86_64`, `riscv32/64`, `STM32`, and `PIC`.
 
-While my expertise lies in embedded systems and holistic design principles, I embrace the opportunity to navigate through complex technological landscapes. Currently, I'm involved in the development of a dual-standard for IoT devices. This exciting project involves exploring the realms of home automation and addressing the challenges that the community faces. By combining my knowledge of embedded systems and holistic design principles, I strive to contribute to the community and drive innovation.
-
-When I'm not immersed in tech, you'll often find me immersed in puzzle and engineering-focused games, keeping my mind sharp and agile. Engaging with communities and sharing knowledge is another passion of mine, as I firmly believe that true power lies in knowledge shared.
-
-Collaboration is the driving force behind my work. I thrive in environments where ideas are exchanged, where I can draw on the collective expertise of my peers to design exceptional systems. I relish the opportunity to collaborate and invest deeply in projects that push the boundaries of innovation.
-
-At the core of my approach is a relentless pursuit of improvement and a commitment to understanding projects at every level of abstraction. I strive to ensure seamless integration, greasing the wheels of systems and empowering them to run as smoothly as possible.
-
-I invite you to explore my portfolio, where I showcase my work and demonstrate how my expertise can propel the tech industry forward. Join me on this exciting journey as we unlock new possibilities in the world of technology.
+If you have any questions or otherwise want to reach out, you can contact me using the info found
+[here](/contact).
