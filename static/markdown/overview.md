@@ -20,6 +20,10 @@ is fine, but leaves some stuff to be desired. I'd like to see a more robust nix 
     - future (**DEFERRED DEVELOPMENT**)
         - This is a new package I'm working on with the sole purpose of being able to reference packages in future versions of nixpkgs. Optionally able to apply as an overlay to the current
 nixpkgs, else it is accessed via `nixpkgs-future.<version>.<package>`
+- ([Linux in Rust](#rs-linux))  A minimal rusty Linux-compatible kernel + distro
+    - A minimal "linux" image, using a minimal linux-compatible kernel written in rust.
+    - rust compiler -> "linux" kernel -> "bare-metal" toolchain target -> buildroot
+    - "linux" kernel -> "'linux' kernel" toolchain target -> buildroot -> user-space tools / utilities
 - ([BASHful](#bashful))         A static code analyzer for bash (**ACTIVE DEVELOPMENT**)
     - A quick and easy way to analyze your bash scripts for errors and have it refactor
 them if desired
