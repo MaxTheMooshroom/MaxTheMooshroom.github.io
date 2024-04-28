@@ -8,7 +8,7 @@ It has on-chip video acceleration hardware extensions, so it can encode and deco
 video codecs quite fast, more than meeting the requirements of a real-time camera
 streaming device.
 - ([NixPkgs](#nixpkgs))         Nix Packages
-    - gstreamer (**ACTIVE DEVELOPMENT**)
+    - gstreamer (**DEFERRED DEVELOPMENT**)
         - <a href="https://github.com/NixOS/nixpkgs/blob/nixos-23.11/pkgs/development/libraries/gstreamer/default.nix" target="_blank">
 The current <code>gstreamer</code> package</a>
 is outdated and fails to use more modern idioms and best practices, and isn't available on all
@@ -17,7 +17,7 @@ platforms.
         - <a href="https://github.com/NixOS/nixpkgs/blob/nixos-23.11/pkgs/by-name/me/meson/package.nix" target="_blank">
 The current <code>meson</code> package</a>
 is fine, but leaves some stuff to be desired. I'd like to see a more robust nix package for it.
-    - future (**DEFERRED DEVELOPMENT**)
+    - future (**ACTIVE DEVELOPMENT**)
         - This is a new package I'm working on with the sole purpose of being able to reference packages in future versions of nixpkgs. Optionally able to apply as an overlay to the current
 nixpkgs, else it is accessed via `nixpkgs-future.<version>.<package>`
 - ([Linux in Rust](#rs-linux))  A minimal rusty Linux-compatible kernel + distro
@@ -39,4 +39,10 @@ functionality or API to do this; you are expected to manually write `.dts`/`.dts
 your specific purposes. This is in stark contrast to the goals of my projects, so I've begun
 refactoring DTC and adding an API for both C and Python. Currently it has been refactored, but
 an API has not yet been written.
+- ([Modpack Validator](#mod-validator))     Tool for validating mod compatibility and finding where incompatibilities lie (***ACTIVE DEVELOPMENT***)
+    - Game Modifications ("Mods") are bundles of data and/or executable code that are injected
+into a game in order to to add, remove, or otherwise alter the contents and/or functionality.
+This software checks the metadata of all enabled mods and validates that they have
+version-dependency compatibility. Once the versions are all validated, it can also find which
+mods are causing a specific error message!
 

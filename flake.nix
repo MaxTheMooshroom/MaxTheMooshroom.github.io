@@ -51,7 +51,7 @@
             # zlib
             # python
             nodejs_20
-            sass
+            # sass
           ];
 
           commands = [

@@ -10,8 +10,8 @@ function flag_name_watch () {
 
 
 function target_sass () {
-    local extra_args
-    [[ ${WATCH} -eq 1 ]] && extra_args="--watch"
+    local extra_args="--style compressed"
+    [[ ${WATCH} -eq 1 ]] && extra_args+=" --watch"
 
     scss ${extra_args} static/scss:static/css
 }
