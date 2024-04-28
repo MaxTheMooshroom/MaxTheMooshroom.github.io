@@ -57,8 +57,8 @@
                                 <a class="disk" data-filename="nixpkgs" onclick="load_from_element(this);">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=nix-%0Apkgs">
                                 </a>
-                                <a class="disk" data-filename="lfs-rs" onclick="load_from_element(this);">
-                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?labelText=Linux%0Ain%0ARust">
+                                <a class="disk no-select" data-filename="">
+                                    <embed src="./static/img/floppy-pastel-iso-alternate.svg?">
                                 </a>
                                 <a class="disk no-select" data-filename="">
                                     <embed src="./static/img/floppy-pastel-iso-alternate.svg?">
@@ -106,7 +106,15 @@
             destination = "overview";
             window.location.hash = "#overview";
         }
+
         var current_selected = document.querySelector(`[data-filename=${destination}]`);
+        function validate_selected() {
+            if (current_selected === null) {
+                current_selected = document.querySelector(`[data-filename=overview]`);
+            }
+        }
+        validate_selected();
+
         var markdown_map = {}; // map from markdown name to markdown contents
 
         fetch("/static/markdown/wip.md")
@@ -190,17 +198,18 @@
             selector_highlight(element);
         }
 
-        current_selected.children[0].addEventListener("load", function() {
+        current_selected.children[0].addEventListener("load", function() {            
             current_selected.children[0].getSVGDocument().children[0].classList.replace("purple", "teal");
             current_selected.classList.add("selected");
             load(`/static/markdown/${destination}.md`);
         });
 
-        function hash_updated() {
+        function hash_updated() {            
             current_selected.children[0].getSVGDocument().children[0].classList.replace("teal", "purple");
             current_selected.classList.remove("selected");
             destination = window.location.hash.substr(1);
             current_selected = document.querySelector(`[data-filename=${destination}]`);
+            validate_selected();
             load_from_element(current_selected);            
         }
         window.addEventListener('hashchange', hash_updated);
@@ -208,11 +217,11 @@
         var disks = document.getElementsByClassName("disk");
         for (var i = 0; i < disks.length; i++) {
             let disk = disks[i];
-            disk.addEventListener("mouseenter", function() {
+            disk.addEventListener("mouseenter", function() {                
                 if (disk !== current_selected)
                     disk.children[0].getSVGDocument().children[0].classList.replace("purple", "teal");
             });
-            disk.addEventListener("mouseleave", function() {
+            disk.addEventListener("mouseleave", function() {                
                 if (disk !== current_selected)
                     disk.children[0].getSVGDocument().children[0].classList.replace("teal", "purple");
             });
