@@ -1,5 +1,5 @@
 {
-  description = "dhelper template virtual environment";
+  description = "goose template virtual environment";
 
   inputs.devshell.url = "github:numtide/devshell";
   inputs.flake-parts.url = "github:hercules-ci/flake-parts";
@@ -51,7 +51,8 @@
             # zlib
             # python
             nodejs_20
-            sass
+            nodePackages.sass
+            # sass
           ];
 
           commands = [
