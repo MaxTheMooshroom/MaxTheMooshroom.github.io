@@ -20,13 +20,13 @@ is fine, but leaves some stuff to be desired. I'd like to see a more robust nix 
     - future (**DEFERRED DEVELOPMENT**)
         - This is a new package I'm working on with the sole purpose of being able to reference packages in future versions of nixpkgs. Optionally able to apply as an overlay to the current
 nixpkgs, else it is accessed via `nixpkgs-future.<version>.<package>`
-- ([BASHful](#bashful))         A static code analyzer for bash (**ACTIVE DEVELOPMENT**)
+- ([Honk](#honk))         A static code analyzer for bash (**ACTIVE DEVELOPMENT**)
     - A quick and easy way to analyze your bash scripts for errors and have it refactor
 them if desired
-- ([DHelper](#dhelper))         A CLI developer tool for managing environments
-(**HIATUS**)
+- ([Goose](#goose))         A CLI developer tool for managing environments
+(**ACTIVE DEVELOPMENT**)
     - A command-line tool to help developers manage their projects by setting up tasks that
-can be operated as if dhelper is a task runner of sorts, or you can use DHelper as a full
+can be operated as if Goose is a task runner of sorts, or you can use Goose as a full
 build system (build system functionality still being developed)
 - ([DTC](#dtc))                 DeviceTree Compiler Refactor and API (**HIATUS**)
     - Several projects that I have planned for the future require operating on live device trees
