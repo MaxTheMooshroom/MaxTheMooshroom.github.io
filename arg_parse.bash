@@ -536,18 +536,18 @@ function print_help () {
                         --table-wrap description
 
         fi
-    else # iterate through targets and collect info ; `$0 -h` or `$0 --help`
+    else # iterate through targets and collect info ; `${APP_NAME} -h` or `${APP_NAME} --help`
         echo "Main usage:"
-        echo "    $0 [common-flag [flag-argument]]... <target> [target-flag [flag-argument]]... [target argument]..."
+        echo "    ${APP_NAME} [common-flag [flag-argument]]... <target> [target-flag [flag-argument]]... [target argument]..."
         echo
         echo "Help aliases:"
-        echo "    $0"
-        echo "    $0  -h"
-        echo "    $0 --help"
-        echo "    $0   help"
+        echo "    ${APP_NAME}"
+        echo "    ${APP_NAME}  -h"
+        echo "    ${APP_NAME} --help"
+        echo "    ${APP_NAME}   help"
         echo
         echo "More detailed help aliases:"
-        echo "    $0 --help-target <target>"
+        echo "    ${APP_NAME} --help-target <target>"
         echo
 
         echo "Common Flags:"
