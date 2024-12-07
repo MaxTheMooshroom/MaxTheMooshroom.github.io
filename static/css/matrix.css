@@ -1,0 +1,26 @@
+
+  
+.matrix {
+  pointer-events: none;
+
+  background: black;
+  color: #0f0; /* Matrix green */
+  font-family: monospace;
+}
+  
+.matrix span {
+  position: absolute;
+  white-space: pre;
+  opacity: 0.8;
+  animation: fall 1s infinite linear;
+}
+  
+@keyframes fall {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 100%;
+  }
+}
+  

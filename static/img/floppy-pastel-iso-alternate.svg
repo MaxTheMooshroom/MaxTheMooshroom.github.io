@@ -185,6 +185,11 @@
         </linearGradient>
     </defs>
 
+
+<!--  Special thanks to my lovely fiancee, *Kimberly Zick (@Rummik),
+      for her contributions! See: https://github.com/rummik/ -->
+
+
     <script>
         // <![CDATA[
         const rotation = -5;

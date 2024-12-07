@@ -25,26 +25,20 @@ elif [[ "${APP_PATH}" != "${PROJECT_PATH}" && -f "${PROJECT_PATH}/${APP_NAME}" ]
     exit $?
 fi
 
-if [[ ! -f "${APP_PATH}/arg_parse.bash" ]]; then
-    echo "${PROJECT_PATH}/.goose/arg_parse.bash is missing! Critical dependency! Exiting..." >&2
+if [[ ! -d "${APP_PATH}/.goose" || ! -f "${APP_PATH}/.goose/core.bash" ]]; then
+    echo "${PROJECT_PATH}/.goose/core.bash is missing! Critical dependency! Exiting..." >&2
     exit 255
 fi
-source ${APP_PATH}/arg_parse.bash
+source ${APP_PATH}/.goose/core.bash
 
-[[ ! -d "${PROJECT_PATH}/targets/" ]] && {
-    echo "no target directory! Nothing to run! Exiting..." >&2
+if [[ ! -f "${APP_PATH}/.goose/namespace.bash" ]]; then
+    echo "${PROJECT_PATH}/.goose/namespace.bash is missing! Critical dependency! Exiting..." >&2
     exit 255
-}
-
-[[ ! -f "${PROJECT_PATH}/targets/common.bash" ]] && {
-    echo "Missing common target! Critical dependency! Exiting..." >&2
-    exit 255
-}
-
-source ${PROJECT_PATH}/targets/common.bash
+fi
+source ${APP_PATH}/.goose/namespace.bash
 
 function init () {
-    [[ -f "${PROJECT_PATH}/.env" ]] && source .env
+    [[ -f ${PROJECT_PATH}/.env ]] && source ${PROJECT_PATH}/.env
 }
 
 function cleanup () {
@@ -56,14 +50,10 @@ function cleanup () {
 function main () {
     init
 
-    validate_flags
-    execute_flags
-
-    [[ ${IGNORE_DEPENDENCIES} -eq 0 ]] && validate_dependencies
-    validate_target
+    find_root_namespace
+    run_namespace
 
     cleanup
 }
 
 main
-
