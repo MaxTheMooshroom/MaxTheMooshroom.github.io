@@ -1,7 +1,6 @@
 
 You can contact me at the following:
 
-- Phone Number: [1-859-493-2691](tel:18594932691)
 - Email: [max.alexander3721@gmail.com](mailto:max.alexander3721@gmail.com)
 
 
