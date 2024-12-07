@@ -7,9 +7,9 @@ various tasks. It has an intuitive command-line interface with a structure that'
 specifically for easy customization.
 
 Goose uses a hierarchical registration model, allowing users to define common flags,
-helper functions, and configurations. Common flags are provided out of the box, and users
-can extend functionality by defining additional flags and functions in the targets/common.bash
-file.
+helper functions, and configurations. Flags that are commonly used are provided out of
+the box, and users can extend functionality by defining additional flags and functions
+in the targets/common.bash file.
 
 Goose has 2 kinds of flags: Common and target-specific. Common flags are present
 regardless of target, while other flags are only present for specific targets. Flag
