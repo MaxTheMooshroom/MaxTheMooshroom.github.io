@@ -1,7 +1,7 @@
 ##### Maxine (she/they)
 
 A proud lesbian punk with radical ideals and a fiery passion for equality and community.
-I thrive on challenging norms and fostering inclusivity in every space I occupies.
+I thrive on challenging norms and fostering inclusivity in every space I occupy.
 
 <a href="https://bsky.app/profile/maxinethemooshroom.bsky.social" target="_blank"><img style="width: 150px;" src="https://blinkies.cafe/b/display/0201-twitterlogo.gif" alt="twitter" /></a>
 <a href="https://bsky.app/profile/maxinethemooshroom.bsky.social" target="_blank"><img style="width: 150px;" src="/static/img/bsky-blinkie.gif" alt="bluesky" /></a>
