@@ -31,6 +31,7 @@
                     <div class="navbar-nav me-3">
                         <a class="nav-link" href="/">Home</a>
                         <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" href="/lessons">Lessons</a>
                         <a class="nav-link" href="/contact">Contact</a>
                         <a class="nav-link" href="/portfolio">Projects</a>
                     </div>
@@ -118,27 +119,27 @@
                     console.log("Attempting to fetch wip markdown");
                     markdown_map["wip"] = response.text();
                 } else {
-                    document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
+                    content.innerText = "Uh oh! Something has gone wrong!";
                     console.log("Error loading wip markdown:", error);
                 }
             })
             .catch(function(error) {
-                document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
+                content.innerText = "Uh oh! Something has gone wrong!";
                 console.log("Error loading wip markdown:", error);
             });
 
         fetch("/static/markdown/error.md")
-            .then(function(response) {
+            .then(response => {
                 if (response.ok) {
                     console.log("Attempting to fetch error markdown");
                     markdown_map["error"] = response.text();
                 } else {
-                    document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
+                    content.innerText = "Uh oh! Something has gone wrong!";
                     console.log("Error loading error markdown:", error);
                 }
             })
             .catch(function(error) {
-                document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
+                content.innerText = "Uh oh! Something has gone wrong!";
                 console.log("Error loading markdown file:", error);
             });
 
@@ -182,7 +183,7 @@
                     content.innerHTML = markdown_map[markdown_location];
                 })
                 .catch(function(error) {
-                    document.getElementById("page-content").innerText = "Uh oh! Something has gone wrong!";
+                    content.innerText = "Uh oh! Something has gone wrong!";
                     console.log("Error loading markdown file:", error);
                 });
         };
@@ -220,11 +221,6 @@
                     disk.children[0].getSVGDocument().children[0].classList.replace("teal", "purple");
             });
         }
-
-        // if (destination === "") {
-        //     window.location.hash = "#portfolio";
-        //     hash_updated();
-        // }
 
     </script>
 </body>

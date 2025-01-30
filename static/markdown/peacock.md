@@ -2,9 +2,10 @@
 
 For too long, developers have been stuck choosing between frameworks like Electron, known for
 its high resource usage, or diving headfirst into comprehensive but complex systems like Qt.
-**Peacock** changes that. It’s a Rust-based GUI framework that simplifies development by using
-tools developers already know: XML and CSS. With Peacock, you get the speed and safety of Rust
-without losing the flexibility and ease of web-style development.
+**[Peacock](https://github.com/nucleus-labs/peacock)** changes that. It’s a Rust-based GUI
+framework that simplifies development by using tools developers already know: XML and CSS.
+With Peacock, you get the speed and safety of Rust without losing the flexibility and ease
+of web-style development.
 
 ---
 
