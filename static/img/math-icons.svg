@@ -1,0 +1,22 @@
+<!-- sample rectangle -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="200" height="200" fill="#B8E8FC" />
+
+  <rect x="10" y="10" width="80" height="80" rx="20" ry="20" fill="#B1AFFF" />
+  <rect x="110" y="10" width="80" height="80" rx="20" ry="20" fill="#B1AFFF" />
+  <rect x="10" y="110" width="80" height="80" rx="20" ry="20" fill="#B1AFFF" />
+  <rect x="110" y="110" width="80" height="80" rx="20" ry="20" fill="#B1AFFF" />
+
+  <path d="M 45,20 L 55,20 L 55,45 L 80,45 L 80,55 L 55,55 L 55,80 L 45,80 L 45,55 L 20,55 L 20,45 L 45,45 Z" fill="white" stroke="#d2d2d2" stroke-width="1" />
+  <path d="M 20,45 L 80,45 L 80,55 L 20,55 Z" fill="white" transform="translate(100, 0)" stroke="#d2d2d2" stroke-width="1" />
+
+  <!-- asterisk -->
+  <path d="M 20,45 L 80,45 L 80,55 L 20,55 Z" fill="white" transform="rotate(0, 50, 150) translate(0, 100)"   stroke="#d2d2d2" stroke-width="2" />
+  <path d="M 20,45 L 80,45 L 80,55 L 20,55 Z" fill="white" transform="rotate(60, 50, 150) translate(0, 100)"  stroke="#d2d2d2" stroke-width="2" />
+  <path d="M 20,45 L 80,45 L 80,55 L 20,55 Z" fill="white" transform="rotate(-60, 50, 150) translate(0, 100)" stroke="#d2d2d2" stroke-width="2" />
+  <path d="M 20,45 L 80,45 L 80,55 L 20,55 Z" fill="white" transform="rotate(0, 50, 150) translate(0, 100)" />
+  <path d="M 20,45 L 80,45 L 80,55 L 20,55 Z" fill="white" transform="rotate(60, 50, 150) translate(0, 100)" />
+  <path d="M 20,45 L 80,45 L 80,55 L 20,55 Z" fill="white" transform="rotate(-60, 50, 150) translate(0, 100)" />
+
+  <path d="M 20,45 L 80,45 L 80,55 L 20,55 Z" fill="white" transform="rotate(-60, 150, 150) translate(100, 100)" stroke="#d2d2d2" stroke-width="1" />
+</svg>

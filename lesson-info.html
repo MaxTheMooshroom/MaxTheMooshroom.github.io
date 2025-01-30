@@ -45,13 +45,12 @@
                     <div class="vw-window flex-fill d-flex flex-column">
                         <div class="vw-window-bar">
                             <div class="vw-window-bar-circles"></div>
-                            <p class="vw-window-title">Contact Me</p>
+                            <p class="vw-window-title">Lesson Info</p>
                         </div>
                         <div class="vw-window-main">
                             <div class="vw-window-content-border">
                                 <div class="vw-window-content">
-                                    <p id="page-content-loading">Loading...</p>
-                                    <div id="page-content"></div>
+                                    <div id="page-content">Loading...</div>
                                 </div>
                             </div>
                         </div>
@@ -65,9 +64,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        fetch("/static/markdown/contact.md")
+        function getUrl() {
+            var url = new URL(window.location.href);
+            var base_url = url.protocol + "//" + url.hostname;
+            if (url.port) {
+                base_url += ":" + url.port;
+            }
+            return base_url;
+        }
+
+        var converter = new showdown.Converter();
+        var content = document.getElementById("page-content");
+        var destination = window.location.hash.substr(1);
+        if (destination === "") {
+            window.location = getUrl() + "/lessons";
+        }
+
+        fetch(`/static/markdown/lessons/${destination}.md`)
             .then(function(response) {
-                return response.text();
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    return "Uh oh! Something has gone wrong!";
+                }
             })
             .then(function(markdown) {
                 var converter = new showdown.Converter();
@@ -75,10 +94,8 @@
 
                 content.innerHTML = converter.makeHtml(markdown);
                 content.style.visibility = "visible";
-                document.getElementById("page-content-loading").style.visibility = "hidden";
             })
             .catch(function(error) {
-                document.getElementById("page-content-loading").innerText = "Uh oh! Something has gone wrong!";
                 console.log("Error loading markdown file:", error);
             });
     </script>

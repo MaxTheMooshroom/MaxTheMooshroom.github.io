@@ -1,0 +1,11 @@
+
+.card {
+    background-color: #B1AFFF;
+}
+
+.card-body a.btn {
+    border-color: var(--bs-border-color-translucent);
+    background-color: white;
+    color: #212529;
+    width: max-content;
+}
