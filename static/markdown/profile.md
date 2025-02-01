@@ -1,7 +1,7 @@
 ##### Maxine (she/they)
 
-A punky lesbian with unorthodox ideals and a passion for community and justice.
-I love challenging norms and fostering inclusivity!
+A punky lesbian with absurdist post-humanist ideals and a passion for community and collaboration.
+I love standing up against fascism and injustice as a whole!
 
 <a href="https://bsky.app/profile/maxinethemooshroom.bsky.social" target="_blank"><img style="width: 150px;" src="https://blinkies.cafe/b/display/0201-twitterlogo.gif" alt="twitter" /></a>
 <a href="https://bsky.app/profile/maxinethemooshroom.bsky.social" target="_blank"><img style="width: 150px;" src="/static/img/bsky-blinkie.gif" alt="bluesky" /></a>
