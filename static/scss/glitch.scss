@@ -7,7 +7,7 @@
 directly on our existing text, while
 also setting content to the appropriate
 text set in the data-text attribute. */
-@mixin glitchCopy { 
+@mixin glitchCopy {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -28,42 +28,42 @@ text set in the data-text attribute. */
 }
 
 .glitch {
-position: relative;
-color: white;
-font-size: 25vh;
+    position: relative;
+    color: white;
+    font-size: 25vh;
 
-font-family: "Streamster";
-text-align: center;
-color: #E0E722;
-filter:             drop-shadow(-2px -1px 4px #75FFFF80);
+    font-family: "Streamster";
+    text-align: center;
+    color: #E0E722;
+    filter:             drop-shadow(-2px -1px 4px #75FFFF80);
 
-user-select: none;              /* Prevent text selection */
--webkit-touch-callout: none;    /* Disable callout on long-press (iOS) */
+    user-select: none;              /* Prevent text selection */
+    -webkit-touch-callout: none;    /* Disable callout on long-press (iOS) */
 
-// Creates a copy before our text. 
-&::before{
-    // Duplicates our text with the mixin.
-    @include glitchCopy;
-    // Scoots text slightly to the left for the color offset.
-    left: 2px;
-    // Creates the color 'shadow' that happens on the glitch.
-    text-shadow: -2px 0 #ff00c1;
-    /* Creates an initial clip for our glitch. This works in
-    a typical top,right,bottom,left fashion and creates a mask
-    to only show a certain part of the glitch at a time. */
-    clip: rect(44px, 450px, 56px, 0);
-    /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
-    with an alternating animation to keep things fresh. */
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-}
+    // Creates a copy before our text. 
+    &::before {
+        // Duplicates our text with the mixin.
+        @include glitchCopy;
+        // Scoots text slightly to the left for the color offset.
+        left: 2px;
+        // Creates the color 'shadow' that happens on the glitch.
+        text-shadow: -2px 0 #ff00c1;
+        /* Creates an initial clip for our glitch. This works in
+a typical top,right,bottom,left fashion and creates a mask
+to only show a certain part of the glitch at a time. */
+        clip: rect(44px, 450px, 56px, 0);
+        /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
+with an alternating animation to keep things fresh. */
+        animation: glitch-anim 5s infinite linear alternate-reverse;
+    }
 
-// Creates a copy after our text. Note comments from ::before.
-&::after {
-    @include glitchCopy;
-    left: -2px;
-    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-    animation: glitch-anim2 1s infinite linear alternate-reverse;
-}
+    // Creates a copy after our text. Note comments from ::before.
+    &::after {
+        @include glitchCopy;
+        left: -2px;
+        text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+        animation: glitch-anim2 1s infinite linear alternate-reverse;
+    }
 }
 
 /* Creates an animation with 20 steaps. For each step, it calculates 
@@ -71,22 +71,22 @@ a percentage for the specific step. It then generates a random clip
 box to be used for the random glitch effect. Also adds a very subtle
 skew to change the 'thickness' of the glitch.*/
 @keyframes glitch-anim {
-$steps: 20;
-@for $i from 0 through $steps {
-#{percentage($i*(1/$steps))} {
-  clip: rect(random(10)+vh, 9999px, random(50)+vh, -9999px);
-        transform: skew((random(100) / 100) + deg);
-}
-}
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i*calc(1/$steps))} {
+            clip: rect(random(10)+vh, 9999px, random(50)+vh, -9999px);
+            transform: skew(calc(random(100) / 100) + deg);
+        }
+    }
 }
 
 // Same deal, just duplicated for ultra randomness.
 @keyframes glitch-anim2 {
-$steps: 20;
-@for $i from 0 through $steps {
-#{percentage($i*(1/$steps))} {
-  clip: rect(random(10)+vh, 9999px, random(50)+vh, -9999px);
-        transform: skew((random(100) / 100) + deg);
-}
-}
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i*calc(1/$steps))} {
+            clip: rect(random(10)+vh, 9999px, random(50)+vh, -9999px);
+            transform: skew(calc(random(100) / 100) + deg);
+        }
+    }
 }
