@@ -64,6 +64,52 @@ div.navbar-nav {
     padding-right: 22px;
 }
 
+/* We're using max-width value used by Bootstrap for `breakpoint-lg` */
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        --bs-navbar-toggler-border-color: var(--bs-border-color);
+        /* color: var(--bs-white); */
+        .navbar-toggler-icon {
+            filter: brightness(10);
+        }
+    }
+
+    nav.container-fluid {
+        position: relative;
+        z-index: 1;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        right: var(--bs-navbar-toggler-padding-x);
+        top: calc(100% - 1.5rem);
+        z-index: 1;
+        text-align: right;
+        padding: .75rem 2rem;
+        text-align: right;
+        background: rgba(0, 0, 0, .9);
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius-lg);
+        transition-property: height, opacity !important;
+
+        .navbar-toggler.collapsed + &.collapsing {
+            opacity: 0;
+        }
+
+        &.collapse:not(.show) {
+            opacity: 0;
+            height: 0;
+            display: block;
+            visibility: hidden;
+        }
+
+        .navbar-nav {
+            padding: 0;
+            margin-right: 0 !important;
+        }
+    }
+}
+
 a.nav-link {
     --bs-navbar-nav-link-padding-x: 22px;
 
