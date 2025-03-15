@@ -1,8 +1,8 @@
 
 # <u>Tutoring - Getting Help in Classes Being Taught By Others</u>
 <br />
-<div class="row row-cols-2 row-cols-lg-3 row-cols-xxl-4 g-4">
-    <div class="col">
+<div class="row row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-4">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="math icons" src="/static/img/math-icons.svg" />
             <div class="card-body">
@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="matrix gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHNmend3Z2FxNXoyZ2RhcGc2cXdpeHp1YmtoOWZ0MWh5MGQ1bmZ5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kg4gaF4zJr57JfjgkO/giphy.gif" />
             <div class="card-body">
@@ -56,8 +56,8 @@
 ***<u>One-Off Classes</u>***<br />
 These classes only have a single session
 
-<div class="row row-cols-2 row-cols-lg-3 row-cols-xxl-4 g-4">
-    <div class="col">
+<div class="row row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-4">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="'finance' bubble text gif" src="https://data.textstudio.com/output/sample/animated/3/7/2/5/finance-3-15273.gif" />
             <div class="card-body">
@@ -81,8 +81,8 @@ These classes only have a single session
 
 These classes have multiple, regular sessions (usually a class per week)
 
-<div class="row row-cols-2 row-cols-lg-3 row-cols-xxl-4 g-4">
-    <div class="col">
+<div class="row row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-4">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="animated circuit gif" src="/static/img/circuitslave.gif" />
             <div class="card-body">
@@ -100,7 +100,7 @@ These classes have multiple, regular sessions (usually a class per week)
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="k-means clustering gif" src="/static/img/kmeans-clustering.gif" />
             <div class="card-body">
@@ -118,7 +118,7 @@ These classes have multiple, regular sessions (usually a class per week)
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="ai brain gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnRjaTM0dDJtZDV0N2U3NDZvMWVvOTZwNzkzd24xcjJhNndsc2MyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PjJ1cLHqLEveXysGDB/giphy.gif" />
             <div class="card-body">
@@ -136,7 +136,7 @@ These classes have multiple, regular sessions (usually a class per week)
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="lua game icons" src="/static/img/lua-games.png" style="image-rendering:crisp-edges;" />
             <div class="card-body">
@@ -154,7 +154,7 @@ These classes have multiple, regular sessions (usually a class per week)
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="unity game icons" src="/static/img/unity-games.png" style="image-rendering:crisp-edges;" />
             <div class="card-body">
@@ -172,7 +172,7 @@ These classes have multiple, regular sessions (usually a class per week)
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-xs">
         <div class="card h-100">
             <img class="card-img-top" alt="godot game icons" src="/static/img/godot-games.png" style="image-rendering:crisp-edges;" />
             <div class="card-body">
