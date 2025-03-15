@@ -30,7 +30,7 @@ text set in the data-text attribute. */
 .glitch {
     position: relative;
     color: white;
-    font-size: 25vh;
+    font-size: hypot(10vmin, 10vmax);
 
     font-family: "Streamster";
     text-align: center;
