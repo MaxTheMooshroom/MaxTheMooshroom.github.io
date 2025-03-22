@@ -3,9 +3,28 @@
     background-color: #B1AFFF;
 }
 
-.card-body a.btn {
-    border-color: var(--bs-border-color-translucent);
-    background-color: white;
-    color: #212529;
-    width: max-content;
+.card-img-top {
+    border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+.card-body, .card-footer {
+    a.btn {
+        border-color: var(--bs-border-color-translucent);
+        background-color: white;
+        color: #212529;
+        width: max-content;
+
+        &.btn-sm {
+            --bs-btn-border-radius: var(--bs-border-radius);
+            font-size: .75rem;
+        }
+    }
+}
+
+.card-footer {
+    background: transparent;
+
+    .card-body + & {
+        border-top: 0;
+    }
 }
