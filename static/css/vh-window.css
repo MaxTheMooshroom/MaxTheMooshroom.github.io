@@ -127,7 +127,7 @@ a.selected embed {
 
 .vw-window-content {
     background-color: white;
-    padding: 10px;
+    padding: 10px calc(var(--bs-gutter-x) * .5);
     position: absolute;
     left: 10px;
     bottom: 10px;

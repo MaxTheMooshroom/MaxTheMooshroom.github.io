@@ -2,3 +2,5 @@
 .env
 node_modules/
 .sass-cache/
+.direnv
+static/**/*.map
